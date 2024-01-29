@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+main {
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+
+#logo {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+#static {
+    position:absolute;
+    width:100%;
+    max-width: 100%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.intro-text {
+    color: azure;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 3rem;
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+}
+
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
+}
+
+.menu {
+    /* background: black; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-text {
+    color: white;
+    font-family: 'UnifrakturMaguntia', cursive;
+    text-align: center;
+}
+
+#brandName {
+    font-size: 15rem;
+}
+
+#coming {
+    font-size: 4rem;
+}
+
+#brandName:hover {
+    transform: scale(1.1); 
+}
+#coming:hover {
+    transform: scale(1.1); 
+}
+
+.menu-hide {
+    min-width: 100%;
+}
+
+.menu-hide span {
+    cursor: pointer;
+    transition: all .2s ease-in-out; 
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 0rem 5rem;
+}
+
+
+@media (max-width: 500px) {
+    #static {
+        min-height: 100%;
+    }
+    #brandName {
+        font-size: 10rem;
+    }
+    
+    #coming {
+        font-size: 3rem;
+    }
+    
+    #brandName:hover {
+        transform: scale(1.1); 
+    }
+    #coming:hover {
+        transform: scale(1.1); 
+    }
+}
