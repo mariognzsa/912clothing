@@ -1,0 +1,39 @@
+
+[
+    {
+        "id": 1,
+        "title": "Black Sweatshirt w/ white design",
+        "description": "Black Sweatshirt with white design front/back description thing.",
+        "price": 599,
+        "discount": 15,
+        "season_released": "1",
+        "sizes": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "images": [
+            "src/img/1/1_1.JPG",
+            "src/img/1/1_2.JPG",
+            "src/img/1/1_3.JPG"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Second Sweatshirt w/ white design",
+        "description": "This is a new description",
+        "price": 1599,
+        "discount": 15,
+        "season_released": "1",
+        "sizes": [
+            "XS",
+            "S",
+            "M"
+        ],
+        "images": [
+            "src/img/1/1_1.JPG",
+            "src/img/1/1_2.JPG",
+            "src/img/1/1_3.JPG"
+        ]
+    }
+]
