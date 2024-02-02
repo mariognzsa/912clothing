@@ -3,15 +3,6 @@
 	text-transform: uppercase;
 }
 
-.shop-container {
-	margin: 20px;
-	padding: 20px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
 .text-title {
 	font-size: 2rem;
 	font-weight: 300;
