@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* nothing yet */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(57, 57, 57);
+    border-radius: 10px;
+}
+
+.shop-container {
+	margin: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+    max-height: 90vh;
+}
+
+.shop-top-container {
+    height: 20vh;
+    width: 100%;
+}
+
+.shop-bottom-container {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+    overflow-y: scroll;
+}
+
+.search-box {
+    display: flex;
+	flex-direction: row;
+    padding: 10px;
+    margin: 60px;
+}
+
+.search-input {
+    padding: 10px;
+    margin:10px;
+    outline: none;
+    border:0;
+    border-bottom:2px solid #000000;
+    width: 300px;
+    font-family:inherit;
+    font-size: inherit;
+}
+
+.search-input:focus-visible, .search-input:focus-within, .search-input:focus, .search-input:hover {
+    outline: none;
+    border:0;
+    border-bottom:2px solid #434343;
+}
+
+.search-button {
+    padding: 10px;
+    margin: 10px;
+    margin:10px;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 0;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    color: #434343;
+}
+
+.search-icon {
+    font-size: 40px;
+}
+
+@media screen and (max-width: 480px) {
+
+    .shop-container {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-height: 90vh;
+    }
+
+    .shop-top-container {
+        height: 20vh;
+        width: 100%;
+    }
+
+    .shop-bottom-container {
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-y: scroll;
+    }
+
+    .search-box {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        margin: 0px;
+    }
+}
