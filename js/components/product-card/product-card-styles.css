@@ -1,0 +1,42 @@
+.product-card-container {
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all .2s ease-in-out;
+}
+
+.product-card-container:hover {
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.05); 
+    cursor: pointer;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-card-info {
+    margin: 10px;
+}
+
+.pc-info-item {
+    padding-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.text-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.text-subtitle {
+    font-size: 14px;
+    font-weight: 200;
+}
