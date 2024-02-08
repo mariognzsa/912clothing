@@ -13,6 +13,11 @@ template.innerHTML =`
     <div id="shop-product-container" class="shop-bottom-container">
     
     </div>
+    <div id="myModal" class="modal">
+        <div id="product-modal" class="modal-content">
+
+        </div>
+    </div>
 </div>
 
 <style>

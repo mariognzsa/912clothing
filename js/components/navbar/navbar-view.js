@@ -2,14 +2,14 @@
 const navbar = document.createElement("navbar");
 navbar.innerHTML =`
 <header class="banner">
-    <nav class="navbar d-flex align-center">
-        <a class="navbar-link" href="">shop</a>
+    <nav class="navbar d-flex align-center sticky">
+        <a class="navbar-link" href="#shop-section">shop</a>
         <a class="navbar-link" href="">about</a>    
     </nav>
 
     <div class="banner-text">
-        <h1>912</h1>
-        <p>Nine Twelve</p>
+        <h1 class="logo-number">912</h1>
+        <p class="logo-lettering">Nine Twelve</p>
     </div>
 
     <div class="social">
