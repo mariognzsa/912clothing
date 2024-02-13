@@ -53,23 +53,29 @@ header {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    transition: background-color 0.4s ease-in-out;
 }
 
 a {
     font-weight: 600;
     font-size: 1.5rem;
-    /* opacity: 80%; */
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     padding: 10px 15px;
-    /* border-radius: 15px; */
     display: inline-block;
-    /* transition: transform 1s ease, color 1s ease, background-color 1s ease; */
+    transition: color 0.4s ease-in-out;
 }
 
-.navbar a:hover {
-    transform: scale(1.1);
+.scrolled {
+    background-color: #fff;
+}
+
+.scrolledText {
+    color: #000;
+}
+
+nav a:hover {
     color: #000;
 }
 
@@ -82,32 +88,6 @@ a {
     text-align: center;
     margin: auto;
     color: white;
-}
-
-h1 {
-    margin: 0 auto;
-    font-size: 200px;
-    letter-spacing: 0;
-    transition: text-shadow 1s ease;
-}
-
-h1:hover {
-    text-shadow: rgba(255, 0, 0, 0.700) -3px 0, rgba(0, 255, 255, 0.700) 3px 0;
-}
-
-p {
-    margin-top: 0;
-    font-size: 40px;
-}
-
-.social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social a:hover {
-    transform: scale(1.2);
 }
 
 .sticky {
@@ -123,51 +103,36 @@ p {
 .logo-number {
     font-size: 16rem;
     font-weight: 200;
+    margin: 0 auto;
+    letter-spacing: 0;
+    transition: text-shadow 1s ease;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .logo-lettering {
+    margin-top: 0;
     font-size: 3rem;
 }
 
+.banner-text h1:hover {
+    text-shadow:  rgba(150, 150, 150, 0.8) -3px 0, rgba(0, 0, 0, 0.8) 3px 0;
+}
+
 /* RESPONSIVE DESIGN*/
+
+/* Media query for cellphones */
 @media (max-width: 640px) {
-    .navbar{
-        flex-direction: column;
-        width: 100%;
+    .logo-number {
+        font-size: 11rem;
     }
-
-    a {
-        width: 70%;
-        text-align: center;
+    .logo-lettering {
+        font-size: 2rem;
     }
-
-    /* .banner-text h1 {
-        font-size: 100px;
-    }
-    .banner-text p {
-        font-size: 16px; /* Ajusta el tamaño del texto según tus preferencias 
-    } */
 }
 
-/* Media query para tablets */
+/* Media query for tablets */
 @media (min-width: 641px) and (max-width: 1024px) {
-    /* .banner-text h1 {
-        font-size: 150px;
+    .logo-number {
+        font-size: 13rem;
     }
-
-    .banner-text p {
-        font-size: 20px; /* Ajusta el tamaño del texto según tus preferencias 
-    } */
-}
-
-/* Media query para laptops y pantallas más grandes */
-@media (min-width: 1025px) {
-    /* .banner-text h1 {
-        font-size: 200px;
-    }
-
-    .banner-text p {
-        font-size: 24px; /* Ajusta el tamaño del texto según tus preferencias 
-    } */
 }
