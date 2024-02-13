@@ -14,6 +14,7 @@ class ProductCard extends HTMLElement {
         this.root = this.attachShadow({ mode: "closed" });
         let clone = template.content.cloneNode(true);
         this.root.append(clone);
+        this.registerEventListeners();
     }
 
     /**
@@ -21,7 +22,7 @@ class ProductCard extends HTMLElement {
      * @returns 
      */
     static get observedAttributes() {
-        return ["productname", "productprice", "productimage"];
+        return ["productname", "productprice", "productimage", "type"];
     }
 
     /**
@@ -57,7 +58,43 @@ class ProductCard extends HTMLElement {
             img.alt = "product image";
             // div.append(img);
         }
+        else if(attrName.toLowerCase() === "type") {
+            if(newVal == "modal"){
+                const div = this.root.querySelector(".product-card-container");
+                div.className = "product-card-modal";
+            }
+        }
     }
+
+    /**
+     * 
+     */
+    registerEventListeners = () => {
+        this.root.addEventListener("click", this.handleClickCard);
+    }
+
+    /**
+     * 
+     * @param {*} event 
+     */
+    handleClickCard = (event) => {
+        console.log(event)
+        const customEvent = new CustomEvent("clickCard", {
+            detail: {
+                id: this.getAttribute("id"),
+                name: this.getAttribute("productname"),
+                price: this.getAttribute("productprice"),
+                image: this.getAttribute("productimage"),
+            }
+        });
+        console.log("dispatch", customEvent);
+        this.root.dispatchEvent(customEvent);
+    }
+    
+    /**
+     * 
+     */
+
 
     /**
      * 
@@ -90,6 +127,24 @@ class ProductCard extends HTMLElement {
 
     set productimage(value) {
         this.setAttribute("productimage", value);
+    }
+
+    /**
+     * 
+     */
+    get type() {
+        return this.getAttribute("type");
+    }
+
+    set type(value) {
+        this.setAttribute("type", value);
+    }
+
+    /**
+     * Callback for when element gets disconnected from DOM
+     */
+    disconnectedCallback() {
+        this.root.removeEventListener("click", this.handleClickCard);
     }
 
 

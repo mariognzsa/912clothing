@@ -14,6 +14,9 @@ class ShopContainer extends HTMLElement {
         this.root = this.attachShadow({ mode: "closed" });
         let clone = template.content.cloneNode(true);
         this.root.append(clone);
+        this.productModal = this.root.querySelector("#myModal");
+        this.productModalFlag = false;
+        this.doubleEventFlag = false;
         this.registerEventListeners();
         this.restoreProductArray();
         this.setupProducts();
@@ -31,6 +34,7 @@ class ShopContainer extends HTMLElement {
                 product.productname = item.title;
                 product.productprice = `$ ${item.price}.00`;
                 product.productimage = item.images[0];
+                product.root.addEventListener("clickCard", this.onOpenProductModal);
                 this.root.querySelector("#shop-product-container").append(product);
             });
         } else {
@@ -47,6 +51,7 @@ class ShopContainer extends HTMLElement {
     registerEventListeners() {
         this.root.querySelector("#search-button").addEventListener("click", this.handleSearchEvent);
         this.root.querySelector("#search-input").addEventListener("keypress", this.handleSearchEvent);
+        window.addEventListener("click", this.onCloseProductModal);
     }
 
     /**
@@ -86,6 +91,37 @@ class ShopContainer extends HTMLElement {
         this.root.querySelector("#shop-product-container").innerHTML = "";
     }
 
+    /**
+     * 
+     */
+    onOpenProductModal = (event) => {
+        if(!this.productModalFlag) {
+            console.log("Event", event);
+            let product = document.createElement("product-card");
+            product.productname = event.detail.name;
+            product.productprice = event.detail.price;
+            product.productimage = event.detail.image;
+            product.type = "modal";
+            this.productModal.querySelector("#product-modal").append(product);
+            this.productModal.style.display = "block";
+            this.productModalFlag = true;
+            this.doubleEventFlag = true;
+        }
+    }
+
+    onCloseProductModal = (event) => {
+        if(!this.doubleEventFlag && this.productModalFlag){
+            console.log("Event", event);
+            if(event.target != this.productModal) {
+                this.productModal.querySelector("#product-modal").innerHTML = "";
+                this.productModal.style.display = "none";
+                this.productModalFlag = false;
+            }
+        } else if(this.doubleEventFlag){
+            this.doubleEventFlag = false;
+        }
+        
+    }
 
     /**
      * Define allowed attributes
@@ -111,6 +147,7 @@ class ShopContainer extends HTMLElement {
     disconnectedCallback() {
         this.root.querySelector("#search-button").removeEventListener("click", this.handleSearchEvent);
         this.root.querySelector("#search-input").removeEventListener("keypress", this.handleSearchEvent);
+        window.removeEventListener("click", this.handleCloseModal);
     }
 
 }

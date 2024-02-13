@@ -1,3 +1,7 @@
+header {
+    --nav-bar-height: 100px;
+}
+
 .d-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -12,7 +16,7 @@
 
 .banner {
     position: relative;
-    height: 70vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,48 +29,54 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://media.giphy.com/media/FkUyGd7FDh1gk/giphy.gif');
+    background-image: url('https://favim.com/pd/s1/orig/151223/aesthetic-aesthetics-gif-love-Favim.com-3798581.gif');
     background-size: cover;
     background-position: center;
-    border-radius: 0px 0px 40px 40px;
     filter: grayscale(100%);
+    opacity: 150%;
 }
 
 /* HEADER*/
 header {
     position: relative;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 /* NAVBAR */
 .navbar {
     position: relative;
-    z-index: 1;
-    height: 60px;
-    max-width: 1200px;
+    z-index: 100;
+    height: var(--nav-bar-height);
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    transition: background-color 0.4s ease-in-out;
 }
 
 a {
-    background-color: #000;
-    opacity: 80%;
+    font-weight: 600;
+    font-size: 1.5rem;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     padding: 10px 15px;
-    border-radius: 15px;
     display: inline-block;
-    transition: transform 1s ease, color 1s ease, background-color 1s ease;
+    transition: color 0.4s ease-in-out;
 }
 
-.navbar a:hover {
-    transform: scale(1.2);
+.scrolled {
     background-color: #fff;
+}
+
+.scrolledText {
     color: #000;
+}
+
+nav a:hover {
+    color: rgba(100, 100, 100, 0.8);
 }
 
 .banner-text {
@@ -76,74 +86,53 @@ a {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 0;
+    margin: auto;
     color: white;
 }
 
-h1 {
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + * {
+    padding-top: var(--nav-bar-height);
+}
+
+.logo-number {
+    font-size: 16rem;
+    font-weight: 200;
     margin: 0 auto;
-    font-size: 200px;
     letter-spacing: 0;
     transition: text-shadow 1s ease;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-h1:hover {
-    text-shadow: rgba(255, 0, 0, 0.700) -3px 0, rgba(0, 255, 255, 0.700) 3px 0;
-}
-
-p {
+.logo-lettering {
     margin-top: 0;
-    font-size: 40px;
+    font-size: 3rem;
 }
 
-.social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social a:hover {
-    transform: scale(1.2);
+.banner-text h1:hover {
+    text-shadow:  rgba(150, 150, 150, 0.8) -3px 0, rgba(0, 0, 0, 0.8) 3px 0;
 }
 
 /* RESPONSIVE DESIGN*/
+
+/* Media query for cellphones */
 @media (max-width: 640px) {
-    .navbar{
-        flex-direction: column;
-        width: 100%;
+    .logo-number {
+        font-size: 11rem;
     }
-
-    a {
-        width: 70%;
-        text-align: center;
-    }
-
-    .banner-text h1 {
-        font-size: 100px;
-    }
-    .banner-text p {
-        font-size: 16px; /* Ajusta el tamaño del texto según tus preferencias */
+    .logo-lettering {
+        font-size: 2rem;
     }
 }
 
-/* Media query para tablets */
+/* Media query for tablets */
 @media (min-width: 641px) and (max-width: 1024px) {
-    .banner-text h1 {
-        font-size: 150px;
-    }
-
-    .banner-text p {
-        font-size: 20px; /* Ajusta el tamaño del texto según tus preferencias */
-    }
-}
-
-/* Media query para laptops y pantallas más grandes */
-@media (min-width: 1025px) {
-    .banner-text h1 {
-        font-size: 200px;
-    }
-
-    .banner-text p {
-        font-size: 24px; /* Ajusta el tamaño del texto según tus preferencias */
+    .logo-number {
+        font-size: 13rem;
     }
 }
