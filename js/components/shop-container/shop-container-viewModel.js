@@ -51,7 +51,18 @@ class ShopContainer extends HTMLElement {
     registerEventListeners() {
         this.root.querySelector("#search-button").addEventListener("click", this.handleSearchEvent);
         this.root.querySelector("#search-input").addEventListener("keypress", this.handleSearchEvent);
+        this.root.querySelector("#filter-all").addEventListener("click", this.filterEvent);
+        this.root.querySelector("#filter-s1").addEventListener("click", this.filterEvent);
+        this.root.querySelector("#filter-s2").addEventListener("click", this.filterEvent);
+        this.root.querySelector("#filter-s3").addEventListener("click", this.filterEvent);
         window.addEventListener("click", this.onCloseProductModal);
+    }
+
+    filterEvent = (event) => {
+        this.clearProductContainer();
+        this.restoreProductArray();
+        this.products = this.searchAction("item");
+        this.setupProducts("No search results.");
     }
 
     /**
