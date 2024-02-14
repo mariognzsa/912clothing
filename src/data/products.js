@@ -1,4 +1,4 @@
-
+const products =
 [
     {
         "id": 1,
@@ -288,4 +288,6 @@
             "src/img/1/1_3.JPG"
         ]
     }
-]
+];
+
+export default products;
