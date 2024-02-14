@@ -1,6 +1,6 @@
 
 import template from "./shop-container-view.js";
-import products from "../../../src/data/products.json" assert { type: 'json' };
+import products from "../../../src/data/products.js";
 
 /**
  * Custom component for shop container and
