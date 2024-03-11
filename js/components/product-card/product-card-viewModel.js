@@ -14,6 +14,7 @@ class ProductCard extends HTMLElement {
         this.root = this.attachShadow({ mode: "closed" });
         let clone = template.content.cloneNode(true);
         this.root.append(clone);
+        this.registerEventListeners();
     }
 
     /**
@@ -21,15 +22,15 @@ class ProductCard extends HTMLElement {
      * @returns 
      */
     static get observedAttributes() {
-        return ["productname", "productprice", "productimage"];
+        return ["title", "price", "description", "season", "imagefront", "imageback", "type"];
     }
 
     /**
      * Gets called every time a defined attribute changes
      */
     attributeChangedCallback(attrName, oldVal, newVal) {
-        // console.log("Attribute changed", attrName, oldVal, newVal);
-        if(attrName.toLowerCase() === "productname") {
+        console.log("Attribute changed", attrName, oldVal, newVal);
+        if(attrName.toLowerCase() === "title") {
             const div = this.root.querySelector(".product-card-container");
             let p = div.querySelector("#product_name") 
             ? div.querySelector("#product_name") 
@@ -38,7 +39,16 @@ class ProductCard extends HTMLElement {
             p.textContent = newVal;
             // div.querySelector(".product-card-info").append(p);
         }
-        else if(attrName.toLowerCase() === "productprice") {
+        if(attrName.toLowerCase() === "description") {
+            const div = this.root.querySelector(".product-card-container");
+            let p = div.querySelector("#product_description") 
+            ? div.querySelector("#product_description") 
+            : document.createElement("p");
+            p.className = "text-subtitle pc-info-item";
+            p.textContent = newVal;
+            // div.querySelector(".product-card-info").append(p);
+        }
+        else if(attrName.toLowerCase() === "price") {
             const div = this.root.querySelector(".product-card-container");
             let p = div.querySelector("#product_price") 
             ? div.querySelector("#product_price") 
@@ -47,49 +57,158 @@ class ProductCard extends HTMLElement {
             p.textContent = newVal;
             // div.querySelector(".product-card-info").append(p);
         }
-        else if(attrName.toLowerCase() === "productimage") {
-            const div = this.root.querySelector(".product-card-container");
+        else if(attrName.toLowerCase() === "imagefront") {
+            const div = this.root.querySelector("#product_image_front_container");
             let img = div.querySelector("#product_image") 
             ? div.querySelector("#product_image") 
             : document.createElement("img");
             img.className = "product-image";
             img.src = newVal;
             img.alt = "product image";
-            // div.append(img);
+            div.append(img);
+        }
+        else if(attrName.toLowerCase() === "imageback") {
+            const div = this.root.querySelector("#product_image_back_container");
+            let img = div.querySelector("#product_image_back") 
+            ? div.querySelector("#product_image_back") 
+            : document.createElement("img");
+            img.className = "product-image";
+            img.src = newVal;
+            img.alt = "product image back";
+            div.append(img);
+        }
+        else if(attrName.toLowerCase() === "type") {
+            if(newVal == "modal"){
+                const div = this.root.querySelector(".product-card-container");
+                div.className = "product-card-modal";
+            }
         }
     }
 
     /**
      * 
      */
-    get productname() {
-        return this.getAttribute("productname");
+    registerEventListeners = () => {
+        this.root.querySelector("#product_button").addEventListener("click", this.handleClickButton);
+        // this.root.addEventListener("click", this.handleClickCard);
     }
 
-    set productname(value) {
-        this.setAttribute("productname", value);
+    /**
+     * 
+     * @param {*} event 
+     */
+    handleClickCard = (event) => {
+        console.log(event)
+        const customEvent = new CustomEvent("clickCard", {
+            detail: {
+                id: this.getAttribute("id"),
+                name: this.getAttribute("productname"),
+                price: this.getAttribute("productprice"),
+                image: this.getAttribute("productimage"),
+            }
+        });
+        console.log("dispatch", customEvent);
+        this.root.dispatchEvent(customEvent);
     }
 
     /**
      * 
      */
-    get productprice() {
-        return this.getAttribute("productprice");
+    handleClickButton = () => {
+        const api_url = "https://api.whatsapp.com/send?";
+        const phone = "524491058706";
+        const text = encodeURI(`
+        Hello, i'm interested on the item:
+        ${this.getAttribute("title")}
+        ${this.getAttribute("description")}
+        ${this.getAttribute("price")}
+        size: L
+        `);
+        const target_url = `${api_url}phone=${phone}&text=${text}`;
+        window.open(target_url, "_blank").focus();
+    }
+    /**
+     * 
+     */
+    get title() {
+        return this.getAttribute("title");
     }
 
-    set productprice(value) {
-        this.setAttribute("productprice", value);
+    set title(value) {
+        this.setAttribute("title", value);
     }
 
     /**
      * 
      */
-    get productimage() {
-        return this.getAttribute("productimage");
+    get price() {
+        return this.getAttribute("price");
     }
 
-    set productimage(value) {
-        this.setAttribute("productimage", value);
+    set price(value) {
+        this.setAttribute("price", value);
+    }
+
+    /**
+     * 
+     */
+    get description() {
+        return this.getAttribute("description");
+    }
+
+    set description(value) {
+        this.setAttribute("description", value);
+    }
+
+    /**
+     * 
+     */
+    get season() {
+        return this.getAttribute("season");
+    }
+
+    set season(value) {
+        this.setAttribute("season", value);
+    }
+
+    /**
+     * 
+     */
+    get imagefront() {
+        return this.getAttribute("imagefront");
+    }
+
+    set imagefront(value) {
+        this.setAttribute("imagefront", value);
+    }
+
+    /**
+     * 
+     */
+    get imageback() {
+        return this.getAttribute("imageback");
+    }
+
+    set imageback(value) {
+        this.setAttribute("imageback", value);
+    }
+
+    /**
+     * 
+     */
+    get type() {
+        return this.getAttribute("type");
+    }
+
+    set type(value) {
+        this.setAttribute("type", value);
+    }
+
+    /**
+     * Callback for when element gets disconnected from DOM
+     */
+    disconnectedCallback() {
+        this.root.removeEventListener("click", this.handleClickCard);
     }
 
 
