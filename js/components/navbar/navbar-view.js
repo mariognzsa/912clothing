@@ -1,22 +1,19 @@
-//<h1 id="navbar-logo" class="logo">912</h1>
-//<img src="../favicon-32x32.png" id="navbar-logo" class="logo" alt="">
-
 const navbar = document.createElement("navbar");
 navbar.innerHTML =`
 <header class="banner">
     <nav id="navbar" class="navbar sticky">   
-        <a id="navbar_link_shop" class="navbar-link test" href="#shop-section">shop</a>
-        <div id="navbar_logo" class="logo test">
-            <h1 class='navbar_logo_number'>912</h1>
+        <a id="navbar_link_shop" class="navbar-link" href="#shop-section">shop</a>
+        <a id="navbar_logo" class="logo" href="#navbar-section">
+            <h1 class="navbar-logo-number">912</h1>
             <h4 class="navbar-logo-lettering">nine twelve</h4>
-        </div>
-        <a id="navbar_link_about" class="navbar-link test" href="">about</a>
+        </a>
+        <a id="navbar_link_about" class="navbar-link" href="">about</a>
 
         <div class="navbar-responsive">
-            <div id="navbar_responsive_logo" class="navbar-responsive-logo">
-                <h1 class='navbar_logo_number'>912</h1>
+            <a id="navbar_responsive_logo" class="navbar-responsive-logo none" href="#navbar-section">
+                <h1 class="navbar-logo-number">912</h1>
                 <h4 class="navbar-logo-lettering">nine twelve</h4>
-            </div>
+            </a>
 
             <button class="menu-button" type="button" id="menu_open">
                 <svg id="menu-svg" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -33,13 +30,11 @@ navbar.innerHTML =`
     </div>
 
     <div class="modal" id="modal">
-        <div class='modal_image'></div>
         <div class="modal-menu">
-            <div id="link-logo" class="modal_logo">
-                <h1 class='navbar_logo_number'>912</h1>
-                <h4 class="navbar-logo-lettering">nine twelve</h4>
-            </div>
-            
+            <a id="link-logo" class="modal-logo" href="#navbar-section">
+                <h1 class="modal-logo-number">912</h1>
+                <h4 class="modal-logo-lettering">nine twelve</h4>
+            </a>
             <a id="link-shop" href="#shop-section">Shop</a>
             <a href="">About</a>
             <button class="close" type="button" id="menu_close">

@@ -14,6 +14,10 @@ header {
     align-items: center;
 }
 
+.none {
+    display: none;
+}
+
 .banner {
     position: relative;
     height: 100vh;
@@ -55,10 +59,6 @@ header {
     transition: background-color 0.4s ease-in-out, gap 2s ease-in-out;
 }
 
-.navbar_logo_number {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-}
 
 a {
     font-weight: 500;
@@ -92,6 +92,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     opacity: 0%;
+    color: #000;
     margin-top: -3.5rem;
     transition: visibility 2.5s ease-in-out, opacity 2s ease-in-out;
 }
@@ -99,6 +100,12 @@ nav a:hover {
 .scrolledLogo{
     visibility: visible;
     opacity: 100%;
+}
+
+.navbar-logo-number {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .navbar-logo-lettering{
@@ -123,7 +130,6 @@ nav a:hover {
     width: 100%;
 }
 
-
 .logo-number {
     font-size: 16rem;
     font-weight: 200;
@@ -147,9 +153,9 @@ nav a:hover {
 }
 
 .navbar-responsive-logo {
-    color: #fff;
+
     transition: color 2s ease-in-out;
-    display: none;
+    margin-top: 0;
 }
 
 .menu-button {
@@ -166,6 +172,9 @@ nav a:hover {
 
 .modal {
     display: none; /* Hidden by default*/
+    background-image: url('../../../src/img/gallery/imageMenu.jpg');
+    background-size: cover;
+    background-position: center;
     position: fixed; /* Stay in place */
     z-index: 5; /* Sit on top */
     left: 0;
@@ -173,27 +182,8 @@ nav a:hover {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: hidden; /* Enable scroll if needed */
-    /*background-color: rgb(0,0,0);  Fallback color */
     justify-content: center;
     align-items: center;
-    
-}
-
-.modal_image {
-    background-image: url('../../../src/img/gallery/1.JPG');
-    background-size: cover;
-    background-position: center;
-    position: fixed; /* Stay in place */
-    left: -30px;
-    top: -50px;
-    width: 120%; /* Full width */
-    height: 120%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    /*background-color: rgb(0,0,0);  Fallback color */
-    justify-content: center;
-    align-items: center;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
 }
 
 .modal-menu {
@@ -206,7 +196,6 @@ nav a:hover {
     width: 100%;
     height: 100%;
     z-index: 10;
-    margin-top: 5rem;
 }
 
 .close {
@@ -217,12 +206,23 @@ nav a:hover {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-    margin-top: 15rem;
+    margin-top: 10rem;
 }
 
-.modal_logo {
+.modal-logo {
     color: #fff;
     text-align: center;
+}
+
+.modal-logo-number {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.modal-logo-lettering {
+    margin-top: -2.2rem;
+    font-size: .5rem;
 }
 
 .open-menu {
