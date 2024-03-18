@@ -1,6 +1,9 @@
 * {
     --product-image-height: 250px;
     --product-image-width: 350px;
+    --product-modal-image-height: 350px;
+    --product-modal-image-width: 500px;
+    --product-modal-image-height-mobile: 250px;
 }
 
 .product-card-container {
@@ -19,13 +22,46 @@
 }
 
 .product-card-modal {
-    width: 500px;
-    height: 100%;
+    width: var(--product-modal-image-width);
+    height: 800px;
     margin: 10px;
     padding: 10px;
     background-color: white;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     transition: all .2s ease-in-out;
+}
+
+.flip-image-modal {
+    background-color: transparent;
+    margin-top: 80px;
+    width: var(--product-modal-image-width);
+    height: var(--product-modal-image-height);
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.product-image-modal {
+    width: var(--product-modal-image-width);
+    height: var(--product-modal-image-height);
+}
+
+.hidden {
+    display: none;
+}
+
+.close-modal-button {
+    float: right;
+    padding: 10px;
+    margin: 10px;
+    margin:10px;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 0;
+    cursor: pointer;
+}
+
+.close-modal-button:hover {
+    color: #434343;
 }
 
 
@@ -114,6 +150,25 @@
 
 /* Media query for cellphones */
 @media (max-width: 480px) {
-
+    .product-card-modal {
+        width: 90%;
+        height: 80%;
+        padding: 10px;
+        background-color: white;
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+        transition: all .2s ease-in-out;
+    }
     
+    .flip-image-modal {
+        background-color: transparent;
+        margin-top: 80px;
+        width: 100%;
+        height: var(--product-modal-image-height-mobile);
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+    
+    .product-image-modal {
+        width: 100%;
+        height: var(--product-modal-image-height-mobile);
+    }
 }

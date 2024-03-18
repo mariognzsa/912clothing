@@ -58,15 +58,30 @@ class ShopContainer extends HTMLElement {
         this.root.querySelector("#filter-s1").addEventListener("click", this.filterEvent);
         this.root.querySelector("#filter-s2").addEventListener("click", this.filterEvent);
         this.root.querySelector("#filter-s3").addEventListener("click", this.filterEvent);
-        window.addEventListener("click", this.onCloseProductModal);
     }
 
     filterEvent = (event) => {
-        console.log("Event filter", event);
+        console.log("Event filter", event.target.id);
         this.clearProductContainer();
         this.restoreProductArray();
-        this.products = this.searchAction("item");
-        this.setupProducts("No search results.");
+        
+        if(event.target.id == "filter-all"){
+            this.products = this.searchAction("");
+            this.setupProducts("No search results.");
+        }
+        else if(event.target.id == "filter-s1"){
+            this.products = this.filterAction("1");
+            this.setupProducts("No search results.");
+        }
+        else if(event.target.id == "filter-s2"){
+            this.products = this.filterAction("2");
+            this.setupProducts("No search results.");
+        }
+        else if(event.target.id == "filter-s3"){
+            this.products = this.filterAction("3");
+            this.setupProducts("No search results.");
+        }
+        
     }
 
     /**
@@ -92,6 +107,13 @@ class ShopContainer extends HTMLElement {
         });
     }
 
+    filterAction = (filter) => {
+        return this.products.filter((product) => {
+            console.log("product ", product.season_released, filter);
+            return (product.season_released.includes(filter));
+        });
+    }
+
     /**
      * 
      */
@@ -110,32 +132,23 @@ class ShopContainer extends HTMLElement {
      * 
      */
     onOpenProductModal = (event) => {
-        if(!this.productModalFlag) {
-            console.log("Event", event);
-            let product = document.createElement("product-card");
-            product.productname = event.detail.name;
-            product.productprice = event.detail.price;
-            product.productimage = event.detail.image;
-            product.type = "modal";
-            this.productModal.querySelector("#product-modal").append(product);
-            this.productModal.style.display = "block";
-            this.productModalFlag = true;
-            this.doubleEventFlag = true;
-        }
+        console.log("Event", event);
+        const product = document.createElement("product-card");
+        product.title = event.detail.title;
+        product.price = event.detail.price;
+        product.description = event.detail.description;
+        product.imagefront = event.detail.imagefront;
+        product.imageback = event.detail.imageback;
+        product.type = "modal";
+        product.root.addEventListener("closeCard", this.onCloseProductModal);
+        this.productModal.querySelector("#product_modal").append(product);
+        this.productModal.style.display = "block";
     }
 
     onCloseProductModal = (event) => {
-        if(!this.doubleEventFlag && this.productModalFlag){
-            console.log("Event", event);
-            if(event.target != this.productModal) {
-                this.productModal.querySelector("#product-modal").innerHTML = "";
-                this.productModal.style.display = "none";
-                this.productModalFlag = false;
-            }
-        } else if(this.doubleEventFlag){
-            this.doubleEventFlag = false;
-        }
-        
+        console.log("Event close", event);
+        this.productModal.querySelector("#product_modal").innerHTML = "";
+        this.productModal.style.display = "none";
     }
 
     /**

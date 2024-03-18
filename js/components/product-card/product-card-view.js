@@ -2,6 +2,11 @@
 const template = document.createElement("template");
 template.innerHTML =`
 <div class="product-card-container">
+    <div id="product_modal_top" class="modal-header hidden">
+        <button id="close_modal_button" type="button" class="close-modal-button">
+            <i class="material-icons search-icon">close</i>
+        </button>
+    </div>
     <div class="flip-image">
         <div id="product_image" class="flip-image-inner">
             <div id="product_image_front_container" class="flip-image-front">
@@ -23,6 +28,7 @@ template.innerHTML =`
 </div>
 
 <style>
+    @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
     @import url("js/components/product-card/product-card-styles.css");
 </style>
 `;

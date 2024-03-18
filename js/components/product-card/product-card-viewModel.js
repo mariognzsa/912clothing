@@ -79,8 +79,7 @@ class ProductCard extends HTMLElement {
         }
         else if(attrName.toLowerCase() === "type") {
             if(newVal == "modal"){
-                const div = this.root.querySelector(".product-card-container");
-                div.className = "product-card-modal";
+                this.setupStyleForModal();
             }
         }
     }
@@ -88,9 +87,20 @@ class ProductCard extends HTMLElement {
     /**
      * 
      */
+    setupStyleForModal = () => {
+        this.root.querySelector(".product-card-container").className = "product-card-modal";
+        this.root.querySelector(".flip-image").className = "flip-image-modal";
+        this.root.querySelector(".product-image").className = "product-image-modal";
+        this.root.querySelector("#product_modal_top").className = "";
+    }
+
+    /**
+     * 
+     */
     registerEventListeners = () => {
         this.root.querySelector("#product_button").addEventListener("click", this.handleClickButton);
-        // this.root.addEventListener("click", this.handleClickCard);
+        this.root.querySelector(".product-card-info").addEventListener("click", this.handleClickCard);
+        this.root.querySelector("#close_modal_button").addEventListener("click", this.handleCloseModal);
     }
 
     /**
@@ -102,11 +112,28 @@ class ProductCard extends HTMLElement {
         const customEvent = new CustomEvent("clickCard", {
             detail: {
                 id: this.getAttribute("id"),
-                name: this.getAttribute("productname"),
-                price: this.getAttribute("productprice"),
-                image: this.getAttribute("productimage"),
+                title: this.getAttribute("title"),
+                description: this.getAttribute("description"),
+                price: this.getAttribute("price"),
+                imagefront: this.getAttribute("imagefront"),
+                imageback: this.getAttribute("imageback"),
             }
         });
+        console.log("dispatch", customEvent);
+        this.root.dispatchEvent(customEvent);
+    }
+
+    /**
+     * 
+     */
+    handleCloseModal = (event) => {
+        // console.log("Event close", event);
+        // const modal = this.root.parentElement;
+        // console.log("modal", modal);
+        // modal.innerHTML = "";
+        // modal.style.display = "none";
+        console.log(event)
+        const customEvent = new Event("closeCard");
         console.log("dispatch", customEvent);
         this.root.dispatchEvent(customEvent);
     }
