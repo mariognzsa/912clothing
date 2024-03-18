@@ -107,6 +107,12 @@ class ProductCard extends HTMLElement {
                 this.setupStyleForModal();
             }
         }
+        else if(attrName.toLowerCase() === "type") {
+            if(newVal == "modal"){
+                const div = this.root.querySelector(".product-card-container");
+                div.className = "product-card-modal";
+            }
+        }
     }
 
     /**
@@ -261,6 +267,24 @@ class ProductCard extends HTMLElement {
 
     set imageback(value) {
         this.setAttribute("imageback", value);
+    }
+
+    /**
+     * 
+     */
+    get type() {
+        return this.getAttribute("type");
+    }
+
+    set type(value) {
+        this.setAttribute("type", value);
+    }
+
+    /**
+     * Callback for when element gets disconnected from DOM
+     */
+    disconnectedCallback() {
+        this.root.removeEventListener("click", this.handleClickCard);
     }
 
     /**
