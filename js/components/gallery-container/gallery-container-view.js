@@ -36,7 +36,7 @@ template.innerHTML =`
     </div> 
     </div>
     <div class="img-box">
-    <img src="src/img/gallery/gallery4.JPG" alt="" />
+    <img src="src/img/gallery/gallery4.jpg" alt="" />
     <div class="transparent-box">
         <div class="caption">
         <p class="logo-number">912</p>
@@ -45,7 +45,7 @@ template.innerHTML =`
     </div> 
     </div>
     <div class="img-box">
-    <img src="src/img/gallery/gallery5.JPG" alt="" />
+    <img src="src/img/gallery/gallery5.jpg" alt="" />
     <div class="transparent-box">
         <div class="caption">
             <p class="logo-number">912</p>
@@ -81,7 +81,7 @@ template.innerHTML =`
     </div> 
     </div>
     <div class="img-box">
-    <img src="src/img/gallery/gallery8.JPG" alt="" />
+    <img src="src/img/gallery/gallery8.jpg" alt="" />
     <div class="transparent-box">
         <div class="caption">
             <p class="logo-number">912</p>
