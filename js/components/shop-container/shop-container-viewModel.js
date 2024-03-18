@@ -33,8 +33,9 @@ class ShopContainer extends HTMLElement {
                 let product = document.createElement("product-card");
                 product.title = item.title;
                 product.description = item.description;
-                product.season = item.season_released;
+                product.season = "Collection " + item.season_released;
                 product.price = `$ ${item.price}.00`;
+                product.size = item.sizes.join(", ");
                 product.imagefront = item.images[0]? item.images[0] : '';
                 product.imageback = item.images[1]? item.images[1] : '';
                 product.root.addEventListener("clickCard", this.onOpenProductModal);
@@ -137,6 +138,8 @@ class ShopContainer extends HTMLElement {
         product.title = event.detail.title;
         product.price = event.detail.price;
         product.description = event.detail.description;
+        product.size = event.detail.size;
+        product.season = event.detail.season;
         product.imagefront = event.detail.imagefront;
         product.imageback = event.detail.imageback;
         product.type = "modal";

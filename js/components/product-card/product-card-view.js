@@ -18,10 +18,15 @@ template.innerHTML =`
         </div>
     </div>
     <div class="product-card-info">
-        <p id="product_name" class="text-title pc-info-item">Product name</p>
-        <p id="product_description" class="text-subtitle pc-info-item">Item description</p>
+        <div id="product_info_top" class="pc-top-container">
+            <p id="product_name" class="text-title pc-top-item">Product name</p>
+            <p id="product_season" class="text-title pc-season-item">Product season</p>
+        </div>
+        <p id="product_description" class="text-subtitle pc-info-item hidden">Item description</p>
         <p id="product_price" class="text-subtitle pc-info-item">$0</p>
-        <div class="pc-info-item">
+        <p id="product_size_text" class="pc-info-item-bold hidden">Available sizes</p>
+        <p id="product_sizes" class="pc-info-item-bold"></p>
+        <div id="product_button_container" class="pc-info-item">
             <a id="product_button" target="_blank" href="#" class="product-button pc-info-item">Order now</a>
         </div>
     </div>

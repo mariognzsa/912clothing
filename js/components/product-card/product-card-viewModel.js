@@ -13,6 +13,7 @@ class ProductCard extends HTMLElement {
         // const shadowRoot = this.attachShadow({mode: "closed"});
         this.root = this.attachShadow({ mode: "closed" });
         let clone = template.content.cloneNode(true);
+        this.flippedImageFlag = false;
         this.root.append(clone);
         this.registerEventListeners();
     }
@@ -22,7 +23,7 @@ class ProductCard extends HTMLElement {
      * @returns 
      */
     static get observedAttributes() {
-        return ["title", "price", "description", "season", "imagefront", "imageback", "type"];
+        return ["title", "price", "description", "size", "season", "imagefront", "imageback", "type"];
     }
 
     /**
@@ -44,7 +45,7 @@ class ProductCard extends HTMLElement {
             let p = div.querySelector("#product_description") 
             ? div.querySelector("#product_description") 
             : document.createElement("p");
-            p.className = "text-subtitle pc-info-item";
+            p.className = "text-subtitle pc-info-item hidden";
             p.textContent = newVal;
             // div.querySelector(".product-card-info").append(p);
         }
@@ -54,6 +55,24 @@ class ProductCard extends HTMLElement {
             ? div.querySelector("#product_price") 
             : document.createElement("p");
             p.className = "text-subtitle pc-info-item";
+            p.textContent = newVal;
+            // div.querySelector(".product-card-info").append(p);
+        }
+        else if(attrName.toLowerCase() === "size") {
+            const div = this.root.querySelector(".product-card-container");
+            let p = div.querySelector("#product_sizes") 
+            ? div.querySelector("#product_sizes") 
+            : document.createElement("p");
+            p.className = "pc-info-item hidden";
+            p.textContent = newVal;
+            // div.querySelector(".product-card-info").append(p);
+        }
+        else if(attrName.toLowerCase() === "season") {
+            const div = this.root.querySelector(".product-card-container");
+            let p = div.querySelector("#product_season") 
+            ? div.querySelector("#product_season") 
+            : document.createElement("p");
+            p.className = "text-title pc-season-item hidden";
             p.textContent = newVal;
             // div.querySelector(".product-card-info").append(p);
         }
@@ -68,14 +87,20 @@ class ProductCard extends HTMLElement {
             div.append(img);
         }
         else if(attrName.toLowerCase() === "imageback") {
-            const div = this.root.querySelector("#product_image_back_container");
-            let img = div.querySelector("#product_image_back") 
-            ? div.querySelector("#product_image_back") 
-            : document.createElement("img");
-            img.className = "product-image";
-            img.src = newVal;
-            img.alt = "product image back";
-            div.append(img);
+            if(newVal !== ''){
+                const div = this.root.querySelector("#product_image_back_container");
+                let img = div.querySelector("#product_image_back") 
+                ? div.querySelector("#product_image_back") 
+                : document.createElement("img");
+                img.className = "product-image";
+                img.src = newVal;
+                img.alt = "product image back";
+                div.append(img);
+            }
+            else {
+                const div = this.root.querySelector(".flip-image");
+                div.className = "non-flip-image";
+            }
         }
         else if(attrName.toLowerCase() === "type") {
             if(newVal == "modal"){
@@ -89,9 +114,19 @@ class ProductCard extends HTMLElement {
      */
     setupStyleForModal = () => {
         this.root.querySelector(".product-card-container").className = "product-card-modal";
-        this.root.querySelector(".flip-image").className = "flip-image-modal";
+        if(this.getAttribute("imageback") !== ''){
+            this.root.querySelector(".flip-image").className = "flip-image-modal";
+        }
+        else {
+            this.root.querySelector(".non-flip-image").className = "non-flip-image-modal";
+        }
         this.root.querySelector(".product-image").className = "product-image-modal";
         this.root.querySelector("#product_modal_top").className = "";
+        this.root.querySelector("#product_description").className = "text-subtitle pc-info-item";
+        this.root.querySelector("#product_size_text").className = "pc-info-item-bold sizes-margin";
+        this.root.querySelector("#product_sizes").className = "pc-info-item";
+        this.root.querySelector("#product_season").className = "text-title pc-season-item";
+        this.root.querySelector("#product_button_container").className = "product-button-modal";
     }
 
     /**
@@ -114,6 +149,8 @@ class ProductCard extends HTMLElement {
                 id: this.getAttribute("id"),
                 title: this.getAttribute("title"),
                 description: this.getAttribute("description"),
+                size: this.getAttribute("size"),
+                season: this.getAttribute("season"),
                 price: this.getAttribute("price"),
                 imagefront: this.getAttribute("imagefront"),
                 imageback: this.getAttribute("imageback"),
@@ -143,7 +180,7 @@ class ProductCard extends HTMLElement {
      */
     handleClickButton = () => {
         const api_url = "https://api.whatsapp.com/send?";
-        const phone = "524491058706";
+        const phone = "524491205859";
         const text = encodeURI(`
         Hello, i'm interested on the item:
         ${this.getAttribute("title")}
@@ -185,6 +222,17 @@ class ProductCard extends HTMLElement {
 
     set description(value) {
         this.setAttribute("description", value);
+    }
+
+    /**
+     * 
+     */
+    get size() {
+        return this.getAttribute("size");
+    }
+
+    set size(value) {
+        this.setAttribute("size", value);
     }
 
     /**

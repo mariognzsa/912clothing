@@ -4,6 +4,7 @@
     --product-modal-image-height: 350px;
     --product-modal-image-width: 500px;
     --product-modal-image-height-mobile: 250px;
+    --product-modal-image-width-mobile: 350px;
 }
 
 .product-card-container {
@@ -23,8 +24,8 @@
 
 .product-card-modal {
     width: var(--product-modal-image-width);
-    height: 800px;
-    margin: 10px;
+    height: 700px;
+    margin: 30px;
     padding: 10px;
     background-color: white;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
@@ -39,13 +40,23 @@
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
+.non-flip-image-modal {
+    background-color: transparent;
+    margin-top: 80px;
+    width: var(--product-modal-image-width);
+    height: var(--product-modal-image-height);
+}
+
 .product-image-modal {
     width: var(--product-modal-image-width);
     height: var(--product-modal-image-height);
 }
 
+.product-button-modal {
+}
+
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .close-modal-button {
@@ -70,10 +81,47 @@
 }
 
 .pc-info-item {
+    font-size: 14px;
     padding-left: 10px;
     padding-top: 5px;
     margin-bottom: 5px;
     margin-top: 0px;
+}
+
+.pc-info-item-bold {
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.pc-top-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pc-top-item {
+    padding-left: 10px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.pc-season-item {
+    padding: 6px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    background-color: #434343;
+    color: white;
+    border-radius: 5px;
+}
+
+.sizes-margin {
+    padding-top: 20px !important;
 }
 
 .text-title {
@@ -86,13 +134,20 @@
     font-weight: 200;
 }
 
+.non-flip-image {
+    background-color: transparent;
+    padding-top: 10px;
+    width: var(--product-image-width);
+    height: var(--product-image-height);
+}
+
 .flip-image {
     background-color: transparent;
     padding-top: 10px;
     width: var(--product-image-width);
     height: var(--product-image-height);
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
+}
 
 /* This container is needed to position the front and back side */
 .flip-image-inner {
@@ -133,6 +188,7 @@
     border: none;
     color: white;
     padding: 15px 32px;
+    margin-top: 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -146,14 +202,81 @@
     color:black;
 }
 
+.dropdown-box {
+    display: flex;
+	flex-direction: row;
+    padding: 10px;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    /* min-width: 160px; */
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    color: #434343;
+}
+
+.dropdown-text {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+}
+
 /* RESPONSIVE DESING*/
 
 /* Media query for cellphones */
 @media (max-width: 480px) {
     .product-card-modal {
-        width: 90%;
-        height: 80%;
+        width: var(--product-modal-image-width-mobile);
+        height: 700px;
         padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
         background-color: white;
         /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
         transition: all .2s ease-in-out;
@@ -162,13 +285,20 @@
     .flip-image-modal {
         background-color: transparent;
         margin-top: 80px;
-        width: 100%;
+        width: var(--product-modal-image-width-mobile);
         height: var(--product-modal-image-height-mobile);
         perspective: 1000px; /* Remove this if you don't want the 3D effect */
     }
     
+    .non-flip-image-modal {
+        background-color: transparent;
+        margin-top: 80px;
+        width: var(--product-modal-image-width-mobile);
+        height: var(--product-modal-image-height-mobile);
+    }
+    
     .product-image-modal {
-        width: 100%;
+        width: var(--product-modal-image-width-mobile);
         height: var(--product-modal-image-height-mobile);
     }
 }
