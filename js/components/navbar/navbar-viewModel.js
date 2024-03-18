@@ -34,7 +34,7 @@ class Navbar extends HTMLElement {
                 linkShop.className = 'navbar-link scrolledText';
                 linkAbout.className = 'navbar-link scrolledText';
                 logo.className = 'logo scrolledLogo';
-                logoResponsive.className ='scrolledText';
+                logoResponsive.className ='navbar-responsive-logo scrolledText';
 
                 svgPaths.forEach(path => {
                     path.setAttribute('stroke', '#000');
@@ -44,7 +44,7 @@ class Navbar extends HTMLElement {
                 linkShop.className = 'navbar-link';
                 linkAbout.className = 'navbar-link';
                 logo.className = 'logo';
-                logoResponsive.className ='navbar-responsive-logo';
+                logoResponsive.className ='navbar-responsive-logo none';
                 
                 svgPaths.forEach(path => {
                     path.setAttribute('stroke', '#fff');
