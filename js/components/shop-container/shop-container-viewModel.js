@@ -62,7 +62,7 @@ class ShopContainer extends HTMLElement {
     }
 
     filterEvent = (event) => {
-        console.log("Event filter", event.target.id);
+        // console.log("Event filter", event.target.id);
         this.clearProductContainer();
         this.restoreProductArray();
         
@@ -110,7 +110,7 @@ class ShopContainer extends HTMLElement {
 
     filterAction = (filter) => {
         return this.products.filter((product) => {
-            console.log("product ", product.season_released, filter);
+            // console.log("product ", product.season_released, filter);
             return (product.season_released.includes(filter));
         });
     }
@@ -133,7 +133,7 @@ class ShopContainer extends HTMLElement {
      * 
      */
     onOpenProductModal = (event) => {
-        console.log("Event", event);
+        // console.log("Event", event);
         const product = document.createElement("product-card");
         product.title = event.detail.title;
         product.price = event.detail.price;
@@ -149,7 +149,7 @@ class ShopContainer extends HTMLElement {
     }
 
     onCloseProductModal = (event) => {
-        console.log("Event close", event);
+        // console.log("Event close", event);
         this.productModal.querySelector("#product_modal").innerHTML = "";
         this.productModal.style.display = "none";
     }

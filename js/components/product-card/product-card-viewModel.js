@@ -30,7 +30,7 @@ class ProductCard extends HTMLElement {
      * Gets called every time a defined attribute changes
      */
     attributeChangedCallback(attrName, oldVal, newVal) {
-        console.log("Attribute changed", attrName, oldVal, newVal);
+        // console.log("Attribute changed", attrName, oldVal, newVal);
         if(attrName.toLowerCase() === "title") {
             const div = this.root.querySelector(".product-card-container");
             let p = div.querySelector("#product_name") 
@@ -143,7 +143,7 @@ class ProductCard extends HTMLElement {
      * @param {*} event 
      */
     handleClickCard = (event) => {
-        console.log(event)
+        // console.log(event)
         const customEvent = new CustomEvent("clickCard", {
             detail: {
                 id: this.getAttribute("id"),
@@ -156,7 +156,7 @@ class ProductCard extends HTMLElement {
                 imageback: this.getAttribute("imageback"),
             }
         });
-        console.log("dispatch", customEvent);
+        // console.log("dispatch", customEvent);
         this.root.dispatchEvent(customEvent);
     }
 
@@ -164,14 +164,9 @@ class ProductCard extends HTMLElement {
      * 
      */
     handleCloseModal = (event) => {
-        // console.log("Event close", event);
-        // const modal = this.root.parentElement;
-        // console.log("modal", modal);
-        // modal.innerHTML = "";
-        // modal.style.display = "none";
-        console.log(event)
+        // console.log(event)
         const customEvent = new Event("closeCard");
-        console.log("dispatch", customEvent);
+        // console.log("dispatch", customEvent);
         this.root.dispatchEvent(customEvent);
     }
 
