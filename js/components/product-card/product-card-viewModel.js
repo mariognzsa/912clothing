@@ -23,7 +23,7 @@ class ProductCard extends HTMLElement {
      * @returns 
      */
     static get observedAttributes() {
-        return ["title", "price", "description", "size", "season", "imagefront", "imageback", "type"];
+        return ["title", "price", "description", "size", "season", "extras", "imagefront", "imageback", "type"];
     }
 
     /**
@@ -76,6 +76,18 @@ class ProductCard extends HTMLElement {
             p.textContent = newVal;
             // div.querySelector(".product-card-info").append(p);
         }
+        else if(attrName.toLowerCase() === "extras") {
+            if(newVal === "sticker_pack"){
+                const div = this.root.querySelector(".product-card-container");
+                let p = div.querySelector("#product_extra") 
+                ? div.querySelector("#product_extra") 
+                : document.createElement("p");
+                p.className = "text-title pc-extra-item hidden";
+                p.textContent = "+ Sticker pack";
+                // div.querySelector(".product-card-info").append(p);
+            }
+            
+        }
         else if(attrName.toLowerCase() === "imagefront") {
             const div = this.root.querySelector("#product_image_front_container");
             let img = div.querySelector("#product_image") 
@@ -122,6 +134,7 @@ class ProductCard extends HTMLElement {
         this.root.querySelector(".product-card-container").className = "product-card-modal";
         if(this.getAttribute("imageback") !== ''){
             this.root.querySelector(".flip-image").className = "flip-image-modal";
+            this.root.querySelector("#product_image_back").className = "product-image-modal";
         }
         else {
             this.root.querySelector(".non-flip-image").className = "non-flip-image-modal";
@@ -132,7 +145,10 @@ class ProductCard extends HTMLElement {
         this.root.querySelector("#product_size_text").className = "pc-info-item-bold sizes-margin";
         this.root.querySelector("#product_sizes").className = "pc-info-item";
         this.root.querySelector("#product_season").className = "text-title pc-season-item";
-        this.root.querySelector("#product_button_container").className = "product-button-modal";
+        if(this.getAttribute("extras") === 'sticker_pack'){
+            this.root.querySelector("#product_extra").className = "text-title pc-extra-item";
+        }
+        this.root.querySelector("#product_button").className = "product-button-modal product-button";
     }
 
     /**
@@ -157,6 +173,7 @@ class ProductCard extends HTMLElement {
                 description: this.getAttribute("description"),
                 size: this.getAttribute("size"),
                 season: this.getAttribute("season"),
+                extras: this.getAttribute("extras"),
                 price: this.getAttribute("price"),
                 imagefront: this.getAttribute("imagefront"),
                 imageback: this.getAttribute("imageback"),
@@ -250,6 +267,17 @@ class ProductCard extends HTMLElement {
     /**
      * 
      */
+    get extras() {
+        return this.getAttribute("extras");
+    }
+
+    set extras(value) {
+        this.setAttribute("extras", value);
+    }
+
+    /**
+     * 
+     */
     get imagefront() {
         return this.getAttribute("imagefront");
     }
@@ -285,17 +313,6 @@ class ProductCard extends HTMLElement {
      */
     disconnectedCallback() {
         this.root.removeEventListener("click", this.handleClickCard);
-    }
-
-    /**
-     * 
-     */
-    get type() {
-        return this.getAttribute("type");
-    }
-
-    set type(value) {
-        this.setAttribute("type", value);
     }
 
     /**

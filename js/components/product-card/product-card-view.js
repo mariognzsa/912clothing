@@ -23,6 +23,7 @@ template.innerHTML =`
             <p id="product_season" class="text-title pc-season-item">Product season</p>
         </div>
         <p id="product_description" class="text-subtitle pc-info-item hidden">Item description</p>
+        <p id="product_extra" class="text-title pc-extra-item hidden">+ Sticker pack</p>
         <p id="product_price" class="text-subtitle pc-info-item">$0</p>
         <p id="product_size_text" class="pc-info-item-bold hidden">Available sizes</p>
         <p id="product_sizes" class="pc-info-item-bold"></p>

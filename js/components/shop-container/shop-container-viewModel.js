@@ -34,6 +34,7 @@ class ShopContainer extends HTMLElement {
                 product.title = item.title;
                 product.description = item.description;
                 product.season = "Collection " + item.season_released;
+                product.extras = item.extras;
                 product.price = `$ ${item.price}.00`;
                 product.size = item.sizes.join(", ");
                 product.imagefront = item.images[0]? item.images[0] : '';
@@ -140,6 +141,7 @@ class ShopContainer extends HTMLElement {
         product.description = event.detail.description;
         product.size = event.detail.size;
         product.season = event.detail.season;
+        product.extras = event.detail.extras;
         product.imagefront = event.detail.imagefront;
         product.imageback = event.detail.imageback;
         product.type = "modal";
