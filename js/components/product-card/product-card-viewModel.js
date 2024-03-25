@@ -79,11 +79,11 @@ class ProductCard extends HTMLElement {
         else if(attrName.toLowerCase() === "extras") {
             if(newVal === "sticker_pack"){
                 const div = this.root.querySelector(".product-card-container");
-                let p = div.querySelector("#product_season") 
-                ? div.querySelector("#product_season") 
+                let p = div.querySelector("#product_extra") 
+                ? div.querySelector("#product_extra") 
                 : document.createElement("p");
-                p.className = "text-title pc-season-item hidden";
-                p.textContent = newVal;
+                p.className = "text-title pc-extra-item hidden";
+                p.textContent = "+ Sticker pack";
                 // div.querySelector(".product-card-info").append(p);
             }
             
