@@ -14,7 +14,7 @@ const products =
             "L"
         ],
         "images": [
-            "src/img/7/7_front.jpg"
+            "src/img/7/7_front.webp"
         ]
     },
     {
@@ -83,8 +83,8 @@ const products =
             "L"
         ],
         "images": [
-            "src/img/4/4_front.jpg",
-            "src/img/4/4_back.jpg"
+            "src/img/4/4_front.webp",
+            "src/img/4/4_back.webp"
         ]
     },
     {
@@ -101,8 +101,8 @@ const products =
             "L"
         ],
         "images": [
-            "src/img/5/5_front.jpg",
-            "src/img/5/5_back.jpg"
+            "src/img/5/5_front.webp",
+            "src/img/5/5_back.webp"
         ]
     },
     {
@@ -119,8 +119,8 @@ const products =
             "L"
         ],
         "images": [
-            "src/img/6/6_front.jpg",
-            "src/img/6/6_back.jpg"
+            "src/img/6/6_front.webp",
+            "src/img/6/6_back.webp"
         ]
     },
     {
@@ -137,7 +137,7 @@ const products =
             "L"
         ],
         "images": [
-            "src/img/8/8_front.jpg"
+            "src/img/8/8_front.webp"
         ]
     },
     {
@@ -154,7 +154,7 @@ const products =
             "L"
         ],
         "images": [
-            "src/img/9/9_front.jpg"
+            "src/img/9/9_front.webp"
         ]
     },
     {
@@ -171,7 +171,7 @@ const products =
             "L"
         ],
         "images": [
-            "src/img/10/10_front.jpg"
+            "src/img/10/10_front.webp"
         ]
     },
     {
@@ -186,8 +186,8 @@ const products =
             "Unisize"
         ],
         "images": [
-            "src/img/11/11_front.jpg",
-            "src/img/11/11_back.jpg"
+            "src/img/11/11_front.webp",
+            "src/img/11/11_back.webp"
         ]
     },
 ];
