@@ -7,7 +7,7 @@ navbar.innerHTML =`
             <h1 class="navbar-logo-number">912</h1>
             <h4 class="navbar-logo-lettering">nine twelve</h4>
         </a>
-        <a id="navbar_link_about" class="navbar-link" href="">about</a>
+        <a id="navbar_link_about" class="navbar-link" href="#gallery-section">about</a>
 
         <div class="navbar-responsive">
             <a id="navbar_responsive_logo" class="navbar-responsive-logo none" href="#navbar-section">
@@ -36,7 +36,7 @@ navbar.innerHTML =`
                 <h4 class="modal-logo-lettering">nine twelve</h4>
             </a>
             <a id="link-shop" href="#shop-section">Shop</a>
-            <a href="">About</a>
+            <a id="link-about" href="#gallery-section">About</a>
             <button class="close" type="button" id="menu_close">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
