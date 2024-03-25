@@ -7,6 +7,7 @@ const products =
         "price": 349,
         "discount": 0,
         "season_released": "1",
+        "extras": "sticker_pack",
         "sizes": [
             "S",
             "M",
@@ -23,6 +24,7 @@ const products =
         "price": 349,
         "discount": 0,
         "season_released": "2",
+        "extras": "sticker_pack",
         "sizes": [
             "S",
             "M",
@@ -40,6 +42,7 @@ const products =
         "price": 349,
         "discount": 0,
         "season_released": "2",
+        "extras": "sticker_pack",
         "sizes": [
             "S",
             "M",
@@ -57,6 +60,7 @@ const products =
         "price": 349,
         "discount": 0,
         "season_released": "2",
+        "extras": "sticker_pack",
         "sizes": [
             "S",
             "M",
@@ -73,13 +77,14 @@ const products =
         "price": 449,
         "discount": 0,
         "season_released": "3",
+        "extras": "sticker_pack",
         "sizes": [
             "M",
             "L"
         ],
         "images": [
-            "src/img/4/4_front.webp",
-            "src/img/4/4_back.webp"
+            "src/img/4/4_front.jpg",
+            "src/img/4/4_back.jpg"
         ]
     },
     {
@@ -89,14 +94,15 @@ const products =
         "price": 359,
         "discount": 0,
         "season_released": "3",
+        "extras": "sticker_pack",
         "sizes": [
             "S",
             "M",
             "L"
         ],
         "images": [
-            "src/img/5/5_front.webp",
-            "src/img/5/5_back.webp"
+            "src/img/5/5_front.jpg",
+            "src/img/5/5_back.jpg"
         ]
     },
     {
@@ -106,14 +112,15 @@ const products =
         "price": 379,
         "discount": 0,
         "season_released": "3",
+        "extras": "sticker_pack",
         "sizes": [
             "S",
             "M",
             "L"
         ],
         "images": [
-            "src/img/6/6_front.webp",
-            "src/img/6/6_back.webp"
+            "src/img/6/6_front.jpg",
+            "src/img/6/6_back.jpg"
         ]
     },
     {
@@ -123,6 +130,7 @@ const products =
         "price": 259,
         "discount": 0,
         "season_released": "3",
+        "extras": "sticker_pack",
         "sizes": [
             "S",
             "M",
@@ -139,6 +147,7 @@ const products =
         "price": 259,
         "discount": 0,
         "season_released": "3",
+        "extras": "sticker_pack",
         "sizes": [
             "S",
             "M",
@@ -155,6 +164,7 @@ const products =
         "price": 259,
         "discount": 0,
         "season_released": "3",
+        "extras": "sticker_pack",
         "sizes": [
             "S",
             "M",
@@ -171,6 +181,7 @@ const products =
         "price": 50,
         "discount": 0,
         "season_released": "3",
+        "extras": "",
         "sizes": [
             "Unisize"
         ],
