@@ -306,6 +306,7 @@
 /* Media query for cellphones */
 @media (max-width: 480px) {
     .product-card-modal {
+        -webkit-text-size-adjust: 100%;
         width: var(--product-modal-image-width-mobile);
         height: 750px;
         padding: 10px;
