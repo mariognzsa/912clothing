@@ -13,7 +13,11 @@ const loadCustomComponents = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    // HTML loaded
-    
     loadCustomComponents();
+    $("#loading_spinner").show();
+    window.onload = () => {
+        // console.log("Page loaded");
+        $('#loading_spinner').hide();
+        $('#app').show();
+    }
 });

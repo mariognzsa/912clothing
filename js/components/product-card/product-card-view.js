@@ -1,7 +1,9 @@
 
 const template = document.createElement("template");
 template.innerHTML =`
-<div class="product-card-container">
+<div id="loading_icon" class="hidden">
+</div>
+<div id="product_card" class="product-card-container">
     <div id="product_modal_top" class="modal-header hidden">
         <button id="close_modal_button" type="button" class="close-modal-button">
             <i class="material-icons search-icon">close</i>

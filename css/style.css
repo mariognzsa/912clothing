@@ -23,3 +23,14 @@ body {
 .text-subtitle {
 	font-size: 1.5rem;
 }
+
+.loading-spinner {
+	position: fixed;
+	top: 0; left: 0; z-index: 999;
+	width: 100vw; height: 100vh;
+   
+	background-color: white;
+	background-image: url("/src/img/spinner4.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+}

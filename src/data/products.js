@@ -21,7 +21,7 @@ const products =
         "id": 1,
         "title": "Dirty",
         "description": "Combed cotton fabric",
-        "price": 349,
+        "price": 300,
         "discount": 0,
         "season_released": "2",
         "extras": "sticker_pack",
@@ -57,7 +57,7 @@ const products =
         "id": 3,
         "title": "Ramirez",
         "description": "Combed cotton fabric",
-        "price": 349,
+        "price": 300,
         "discount": 0,
         "season_released": "2",
         "extras": "sticker_pack",
@@ -177,7 +177,7 @@ const products =
     {
         "id": 11,
         "title": "Sticker Pack",
-        "description": "Sticker pack collection 01, 02, 03",
+        "description": "Sticker pack collection 01, 02, 03.",
         "price": 50,
         "discount": 0,
         "season_released": "3",
@@ -190,6 +190,22 @@ const products =
             "src/img/11/11_back.webp"
         ]
     },
+    // {
+    //     "id": 12,
+    //     "title": "Six sex special edition",
+    //     "description": "Sticker pack collection 01, 02, 03",
+    //     "price": 50,
+    //     "discount": 0,
+    //     "season_released": "4",
+    //     "extras": "",
+    //     "sizes": [
+    //         "Unisize"
+    //     ],
+    //     "images": [
+    //         "src/img/11/11_front.webp",
+    //         "src/img/11/11_back.webp"
+    //     ]
+    // },
 ];
 
 export default products;
