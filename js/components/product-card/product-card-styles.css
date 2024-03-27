@@ -177,6 +177,14 @@
     transform: rotateY(180deg);
 }
 
+.flip-image-hover-hover .flip-image-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-image-modal-hover .flip-image-inner {
+    transform: rotateY(180deg);
+}
+
 /* Position the front and back side */
 .flip-image-front, .flip-image-back {
     position: absolute;
@@ -278,7 +286,22 @@
 	text-transform: uppercase;
 }
 
+.loading-icon {
+	/* (A1) COVER FULL PAGE */z-index: 999;
+	width: var(--product-image-width);
+    height: var(--product-image-width);
+   
+	/* (A2) SPINNER IMAGE */
+	background-color: white;
+	background-image: url("/src/img/spinner4.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 /* RESPONSIVE DESING*/
+@media (min-width: 480px) {
+    
+}
 
 /* Media query for cellphones */
 @media (max-width: 480px) {

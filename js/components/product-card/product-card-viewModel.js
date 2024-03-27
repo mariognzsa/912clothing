@@ -158,6 +158,7 @@ class ProductCard extends HTMLElement {
         this.root.querySelector("#product_button").addEventListener("click", this.handleClickButton);
         this.root.querySelector(".product-card-info").addEventListener("click", this.handleClickCard);
         this.root.querySelector("#close_modal_button").addEventListener("click", this.handleCloseModal);
+        this.root.querySelector(".flip-image").addEventListener("click", this.handleFlipCard);
     }
 
     /**
@@ -199,16 +200,35 @@ class ProductCard extends HTMLElement {
     handleClickButton = () => {
         const api_url = "https://api.whatsapp.com/send?";
         const phone = "524491205859";
-        const text = encodeURI(`
-        Hello, i'm interested on the item:
+        const text = encodeURI(`Hello, i'm interested on the item:
         ${this.getAttribute("title")}
         ${this.getAttribute("description")}
         ${this.getAttribute("price")}
-        size: L
         `);
         const target_url = `${api_url}phone=${phone}&text=${text}`;
         window.open(target_url, "_blank").focus();
     }
+
+    /**
+     * 
+     */
+    handleFlipCard = () => {
+        // console.log("Flipping image", this.flippedImageFlag)
+        this.root.querySelector(".flip-image").className = (this.flippedImageFlag?
+            "flip-image flip-image-hover" :
+            "flip-image");
+        this.flippedImageFlag = !this.flippedImageFlag;
+    }
+
+    /**
+     * 
+     */
+    handleLoadingState = () => {
+        // console.log("Product card loaded");
+        // this.root.querySelector("#loading-icon").className = "hidden";
+        // this.root.querySelector("#product_card").className = "product-card-container";
+    }
+
     /**
      * 
      */
