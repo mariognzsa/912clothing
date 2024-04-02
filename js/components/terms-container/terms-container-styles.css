@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* nothing yet */
+}
+
+.terms-top-container {
+    padding: 40px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.terms-bottom-container {
+    text-align: justify;
+    padding-left: 140px;
+    padding-right: 140px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 480px) {
+    .terms-bottom-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
