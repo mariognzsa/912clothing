@@ -1,6 +1,10 @@
 
 const template = document.createElement("template");
 template.innerHTML =`
+<style>
+    @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+    @import url("js/components/shop-container/shop-container-styles.css");
+</style>
 <div class="shop-container">
     <div class="shop-top-container">
         <div class="dropdown-box">
@@ -34,10 +38,6 @@ template.innerHTML =`
     </div>
 </div>
 
-<style>
-    @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-    @import url("js/components/shop-container/shop-container-styles.css");
-</style>
 `;
 
 export default template;

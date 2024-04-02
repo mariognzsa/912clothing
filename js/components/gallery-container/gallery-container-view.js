@@ -1,6 +1,9 @@
 
 const template = document.createElement("template");
 template.innerHTML =`
+<style>
+    @import url("js/components/gallery-container/gallery-container-styles.css");
+</style>
 <div class="gallery-image">
     <div class="img-box">
     <video autoplay muted loop playsinline src="src/img/gallery/1.mp4" class="zoom"></video>
@@ -92,9 +95,7 @@ template.innerHTML =`
     </div> 
     </div>
 </div>
-<style>
-    @import url("js/components/gallery-container/gallery-container-styles.css");
-</style>
+
 `;
 
 export default template;

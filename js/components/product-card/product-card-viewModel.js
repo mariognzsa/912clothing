@@ -60,12 +60,17 @@ class ProductCard extends HTMLElement {
         }
         else if(attrName.toLowerCase() === "size") {
             const div = this.root.querySelector(".product-card-container");
-            let p = div.querySelector("#product_sizes") 
+            let select = div.querySelector("#product_sizes") 
             ? div.querySelector("#product_sizes") 
-            : document.createElement("p");
-            p.className = "pc-info-item hidden";
-            p.textContent = newVal;
-            // div.querySelector(".product-card-info").append(p);
+            : document.createElement("select");
+            select.className = "hidden";
+            let sizeArray = newVal.split(",");
+            sizeArray.forEach(element => {
+                let option = document.createElement("option");
+                option.value = element;
+                option.text = element;
+                select.append(option);
+            });
         }
         else if(attrName.toLowerCase() === "season") {
             const div = this.root.querySelector(".product-card-container");
@@ -143,7 +148,7 @@ class ProductCard extends HTMLElement {
         this.root.querySelector("#product_modal_top").className = "";
         this.root.querySelector("#product_description").className = "text-subtitle pc-info-item";
         this.root.querySelector("#product_size_text").className = "pc-info-item-bold sizes-margin";
-        this.root.querySelector("#product_sizes").className = "pc-info-item";
+        this.root.querySelector("#product_sizes").className = "";
         this.root.querySelector("#product_season").className = "text-title pc-season-item";
         if(this.getAttribute("extras") === 'sticker_pack'){
             this.root.querySelector("#product_extra").className = "text-title pc-extra-item";
@@ -203,7 +208,8 @@ class ProductCard extends HTMLElement {
         const text = encodeURI(`Hello, i'm interested on the item:
         ${this.getAttribute("title")}
         ${this.getAttribute("description")}
-        ${this.getAttribute("price")}
+        Price ${this.getAttribute("price")}
+        Size ${this.getSelectedSize()}
         `);
         const target_url = `${api_url}phone=${phone}&text=${text}`;
         window.open(target_url, "_blank").focus();
@@ -227,6 +233,15 @@ class ProductCard extends HTMLElement {
         // console.log("Product card loaded");
         // this.root.querySelector("#loading-icon").className = "hidden";
         // this.root.querySelector("#product_card").className = "product-card-container";
+    }
+
+    /**
+     * 
+     */
+    getSelectedSize = () => {
+        return this.root.querySelector("#product_sizes").value
+        ? this.root.querySelector("#product_sizes").value 
+        : "S";
     }
 
     /**
