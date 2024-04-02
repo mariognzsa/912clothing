@@ -35,8 +35,11 @@ template.innerHTML =`
         <select id="product_sizes" class="hidden">
         </select>
         <div id="product_button_container" class="pc-info-item">
-            <a id="product_button" target="_blank" href="#" class="product-button pc-info-item">Order now</a>
+            <a id="product_button" class="product-button pc-info-item">Order now</a>
         </div>
+        <p id="product_terms" class="pc-info-item-terms hidden">
+            BY MAKING A PURCHASE FROM NINE TWELVE, CUSTOMERS ACCEPT AND AGREE TO BE BOUND BY THESE <a id="product_terms_link" href="#terms-section">TERMS AND CONDITIONS</a>.
+        </p>
     </div>
 </div>
 

@@ -12,15 +12,16 @@
     padding: 40px;
     text-align: center;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .terms-bottom-container {
     text-align: justify;
     padding-left: 140px;
     padding-right: 140px;
-    font-size: 1rem;
-    font-weight: 300;
+    padding-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 200;
 }
 
 @media screen and (max-width: 480px) {

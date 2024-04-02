@@ -154,6 +154,7 @@ class ProductCard extends HTMLElement {
             this.root.querySelector("#product_extra").className = "text-title pc-extra-item";
         }
         this.root.querySelector("#product_button").className = "product-button-modal product-button";
+        this.root.querySelector("#product_terms").className = "pc-info-item-terms";
     }
 
     /**
@@ -164,6 +165,7 @@ class ProductCard extends HTMLElement {
         this.root.querySelector(".product-card-info").addEventListener("click", this.handleClickCard);
         this.root.querySelector("#close_modal_button").addEventListener("click", this.handleCloseModal);
         this.root.querySelector(".flip-image").addEventListener("click", this.handleFlipCard);
+        this.root.querySelector("#product_terms_link").addEventListener("click", this.handleClickTerms);
     }
 
     /**
@@ -224,6 +226,22 @@ class ProductCard extends HTMLElement {
             "flip-image flip-image-hover" :
             "flip-image");
         this.flippedImageFlag = !this.flippedImageFlag;
+    }
+
+    /**
+     * 
+     */
+    handleClickTerms = () => {
+        this.handleCloseModal();
+        window.location.hash = "#terms-section";
+
+        // NOT NEEDED FOR NOW
+        // if (navigator.userAgent.match(/Chrome|AppleWebKit/)) { 
+        //     window.location.href = "#terms-section";
+        //     window.location.href = "#terms-section";
+        // } else {
+        //     window.location.hash = "#terms-section";
+        // }
     }
 
     /**

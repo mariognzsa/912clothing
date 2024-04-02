@@ -3,7 +3,7 @@ const products =
     {
         "id": 7,
         "title": "Traumatismo",
-        "description": "Combed cotton fabric",
+        "description": "Oversize, Combed cotton fabric",
         "price": 349,
         "discount": 0,
         "season_released": "1",
@@ -20,7 +20,7 @@ const products =
     {
         "id": 1,
         "title": "Dirty",
-        "description": "Combed cotton fabric",
+        "description": "Oversize, Combed cotton fabric",
         "price": 300,
         "discount": 0,
         "season_released": "2",
@@ -38,7 +38,7 @@ const products =
     {
         "id": 2,
         "title": "Forgiving",
-        "description": "Combed cotton fabric",
+        "description": "Oversize, Combed cotton fabric",
         "price": 349,
         "discount": 0,
         "season_released": "2",
@@ -56,7 +56,7 @@ const products =
     {
         "id": 3,
         "title": "Ramirez",
-        "description": "Combed cotton fabric",
+        "description": "Oversize, Combed cotton fabric",
         "price": 300,
         "discount": 0,
         "season_released": "2",
@@ -73,7 +73,7 @@ const products =
     {
         "id": 4,
         "title": "Dear God",
-        "description": "Cotton fabric/Polyester",
+        "description": "Oversize, Cotton fabric/Polyester",
         "price": 449,
         "discount": 0,
         "season_released": "3",
@@ -90,7 +90,7 @@ const products =
     {
         "id": 5,
         "title": "Prayers",
-        "description": "Combed cotton fabric",
+        "description": "Oversize, Combed cotton fabric",
         "price": 359,
         "discount": 0,
         "season_released": "3",

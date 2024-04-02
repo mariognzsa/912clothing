@@ -33,36 +33,7 @@ template.innerHTML =`
         <li>to. We reserve the right to modify or update these terms and conditions at any time without prior notice.</li>
         <li>b. Changes will be effective immediately upon posting on our website.</li>
         
-        <h4>By making a purchase from <b>NINE TWELVE</b>, customers accept and agree to be bound by these terms and conditions.</h4>
-    </div>
-    <div class="terms-top-container">
-        Términos y Condiciones de NINE TWELVE:
-    </div>
-    <div class="terms-bottom-container">
-        <h4>Cambios de Talla:</h4>
-        <li>a. Compras en Línea: Los clientes tienen un plazo de dos semanas a partir de la fecha de recepción del pedido para solicitar cambios de talla.</li>
-        <li>b. Compras en Físico: Los clientes tienen un plazo de una semana a partir de la fecha de compra para solicitar cambios de talla en nuestras tiendas físicas.</li>
-        
-        <h4>Reembolsos:</h4>
-        <li>a. No se realizan reembolsos por compras realizadas en línea o en tiendas físicas.</li>
-        <li>b. En caso de devolución, se emitirá un crédito en línea o un vale para futuras compras en tiendas físicas, sujeto a nuestras políticas de devolución.</li>
-        
-        <h4>Condiciones de Cambio:</h4>
-        <li>a. Las prendas deben devolverse en su estado original, sin haber sido usadas y con todas las etiquetas intactas.</li>
-        <li>b. Nos reservamos el derecho de negar cambios si la prenda devuelta está en mal estado debido al uso indebido del cliente.</li>
-        
-        <h4>Proceso de Cambio:</h4>
-        <li>a. Los clientes deben comunicarse con nuestro servicio de atención al cliente para iniciar el proceso de cambio por medio de nuestra pagina de instagram.</li>
-        <li>b. Los costos de envío asociados con el cambio de talla son responsabilidad del cliente, a menos que el cambio sea debido a un error por parte de NINE TWELVE.</li>
-        
-        <h4>Exclusiones:</h4>
-        <li>a. Los productos en oferta, liquidación o personalizados están excluidos de nuestra política de cambios, a menos que presenten defectos de fabricación.</li>
-        
-        <h4>Modificaciones:</h4>
-        <li>a. Nos reservamos el derecho de modificar o actualizar estos términos y condiciones en cualquier momento sin previo aviso.</li>
-        <li>b. Los cambios entrarán en vigencia inmediatamente después de su publicación en nuestro sitio web.</li>
-        
-        <h4>Al realizar una compra en <b>NINE TWELVE</b>, los clientes aceptan y se comprometen a cumplir con estos términos y condiciones.</h4>
+        <h4>By making a purchase from <l>NINE TWELVE</l>, customers accept and agree to be bound by these terms and conditions.</h4>
     </div>
 </div>
 

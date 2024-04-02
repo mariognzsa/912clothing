@@ -24,7 +24,7 @@
 
 .product-card-modal {
     width: var(--product-modal-image-width);
-    height: 750px;
+    height: 800px;
     margin: 30px;
     padding: 10px;
     background-color: white;
@@ -86,6 +86,13 @@
     padding-left: 10px;
     padding-top: 5px;
     margin-bottom: 5px;
+    margin-top: 0px;
+}
+
+.pc-info-item-terms {
+    font-size: 10px;
+    text-align: justify;
+    padding: 15px;
     margin-top: 0px;
 }
 
@@ -328,6 +335,10 @@ select option:hover {
 
 /* Media query for cellphones */
 @media (max-width: 480px) {
+    .product-card-container {
+        -webkit-text-size-adjust: 100%;
+    }
+
     .product-card-modal {
         -webkit-text-size-adjust: 100%;
         width: var(--product-modal-image-width-mobile);
