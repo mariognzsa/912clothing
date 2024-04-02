@@ -1,5 +1,8 @@
 const navbar = document.createElement("navbar");
 navbar.innerHTML =`
+<style>
+    @import url("js/components/navbar/navbar-styles.css");
+</style>
 <header class="banner">
     <nav id="navbar" class="navbar sticky">   
         <a id="navbar_link_shop" class="navbar-link" href="#shop-section">shop</a>
@@ -47,10 +50,6 @@ navbar.innerHTML =`
         </div>
     </div>
 </header>
-
-<style>
-    @import url("js/components/navbar/navbar-styles.css");
-</style>
 
 `;
 

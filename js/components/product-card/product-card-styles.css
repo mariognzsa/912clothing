@@ -286,6 +286,29 @@
 	text-transform: uppercase;
 }
 
+select {
+    width: 20%;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    margin-left: 10px;
+    text-decoration: none;
+    background-color: white;
+}
+
+select option {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+}
+
+select option:hover {
+    box-shadow: 0 0 10px 100px #1882A8 inset;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
 .loading-icon {
 	/* (A1) COVER FULL PAGE */z-index: 999;
 	width: var(--product-image-width);

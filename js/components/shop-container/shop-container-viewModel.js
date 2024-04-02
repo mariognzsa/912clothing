@@ -36,7 +36,7 @@ class ShopContainer extends HTMLElement {
                 product.season = "Collection " + item.season_released;
                 product.extras = item.extras;
                 product.price = `$ ${item.price}.00`;
-                product.size = item.sizes.join(", ");
+                product.size = item.sizes.join(",");
                 product.imagefront = item.images[0]? item.images[0] : '';
                 product.imageback = item.images[1]? item.images[1] : '';
                 product.root.addEventListener("clickCard", this.onOpenProductModal);
