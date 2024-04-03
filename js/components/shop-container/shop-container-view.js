@@ -31,9 +31,7 @@ template.innerHTML =`
     <div id="shop-product-container" class="shop-bottom-container">
     
     </div>
-    <p class="terms-container">
-        BY MAKING A PURCHASE FROM NINE TWELVE, CUSTOMERS ACCEPT AND AGREE TO BE BOUND BY THESE <a href="#terms-section">TERMS AND CONDITIONS</a>.
-    </p>
+    
     <div id="myModal" class="modal">
         <div id="product_modal" class="modal-content">
 

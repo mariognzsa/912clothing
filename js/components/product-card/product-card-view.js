@@ -38,7 +38,7 @@ template.innerHTML =`
             <a id="product_button" class="product-button pc-info-item">Order now</a>
         </div>
         <p id="product_terms" class="pc-info-item-terms hidden">
-            BY MAKING A PURCHASE FROM NINE TWELVE, CUSTOMERS ACCEPT AND AGREE TO BE BOUND BY THESE <a id="product_terms_link" href="#terms-section">TERMS AND CONDITIONS</a>.
+            BY MAKING A PURCHASE FROM NINE TWELVE, CUSTOMERS ACCEPT AND AGREE TO BE BOUND BY THESE <a id="product_terms_link" class="pc-info-item-terms-link" href="#terms-section">TERMS AND CONDITIONS</a>.
         </p>
     </div>
 </div>
