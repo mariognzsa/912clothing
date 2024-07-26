@@ -18,6 +18,7 @@ template.innerHTML =`
                     <a id="filter-s1" class="dropdown-text">Season 1</a>
                     <a id="filter-s2" class="dropdown-text">Season 2</a>
                     <a id="filter-s3" class="dropdown-text">Season 3</a>
+                    <a id="filter-s4" class="dropdown-text">Season 4</a>
                 </div>
             </div>
         </div>

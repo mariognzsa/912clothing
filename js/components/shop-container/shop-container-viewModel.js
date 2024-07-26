@@ -60,6 +60,7 @@ class ShopContainer extends HTMLElement {
         this.root.querySelector("#filter-s1").addEventListener("click", this.filterEvent);
         this.root.querySelector("#filter-s2").addEventListener("click", this.filterEvent);
         this.root.querySelector("#filter-s3").addEventListener("click", this.filterEvent);
+        this.root.querySelector("#filter-s4").addEventListener("click", this.filterEvent);
     }
 
     filterEvent = (event) => {
@@ -83,7 +84,10 @@ class ShopContainer extends HTMLElement {
             this.products = this.filterAction("3");
             this.setupProducts("No search results.");
         }
-        
+        else if(event.target.id == "filter-s4"){
+            this.products = this.filterAction("4");
+            this.setupProducts("No search results.");
+        }
     }
 
     /**
