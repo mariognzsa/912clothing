@@ -14,6 +14,10 @@ header {
     align-items: center;
 }
 
+.none {
+    display: none;
+}
+
 .banner {
     position: relative;
     height: 100vh;
@@ -29,10 +33,9 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://favim.com/pd/s1/orig/151223/aesthetic-aesthetics-gif-love-Favim.com-3798581.gif');
+    background-image: url('../../../src/img/banner.gif');
     background-size: cover;
     background-position: center;
-    filter: grayscale(100%);
     opacity: 150%;
 }
 
@@ -56,9 +59,10 @@ header {
     transition: background-color 0.4s ease-in-out, gap 2s ease-in-out;
 }
 
+
 a {
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 1.3rem;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
@@ -88,6 +92,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     opacity: 0%;
+    color: #000;
     margin-top: -3.5rem;
     transition: visibility 2.5s ease-in-out, opacity 2s ease-in-out;
 }
@@ -97,8 +102,15 @@ nav a:hover {
     opacity: 100%;
 }
 
+.navbar-logo-number {
+    padding-top: 1rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
 .navbar-logo-lettering{
-    margin-top: -1.5rem;
+    margin-top: -1.4rem;
     font-size: .4rem;
 }
 
@@ -109,7 +121,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: auto;
+    margin: auto ;
     color: white;
 }
 
@@ -119,12 +131,8 @@ nav a:hover {
     width: 100%;
 }
 
-.sticky + * {
-    padding-top: var(--nav-bar-height);
-}
-
 .logo-number {
-    font-size: 16rem;
+    font-size: 11rem;
     font-weight: 200;
     margin: 0 auto;
     letter-spacing: 0;
@@ -133,8 +141,9 @@ nav a:hover {
 }
 
 .logo-lettering {
-    margin-top: 0;
-    font-size: 3rem;
+    margin-top: -28px;
+    font-size: 3.2rem;
+    text-align: center;
 }
 
 .banner-text h1:hover {
@@ -146,8 +155,9 @@ nav a:hover {
 }
 
 .navbar-responsive-logo {
-    color: #fff;
+
     transition: color 2s ease-in-out;
+    margin-top: 0;
 }
 
 .menu-button {
@@ -164,19 +174,22 @@ nav a:hover {
 
 .modal {
     display: none; /* Hidden by default*/
+    background-image: url('../../../src/img/gallery/imageMenu.jpg');
+    background-size: cover;
+    background-position: center;
     position: fixed; /* Stay in place */
-    z-index: 10; /* Sit on top */
+    z-index: 5; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
+    overflow: hidden; /* Enable scroll if needed */
     justify-content: center;
     align-items: center;
 }
 
 .modal-menu {
+    position: relative;
     display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -184,6 +197,7 @@ nav a:hover {
     align-items: center;
     width: 100%;
     height: 100%;
+    z-index: 10;
 }
 
 .close {
@@ -194,7 +208,23 @@ nav a:hover {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-    margin-top: 2rem;
+    margin-top: 10rem;
+}
+
+.modal-logo {
+    color: #fff;
+    text-align: center;
+}
+
+.modal-logo-number {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.3rem;
+    text-align: center;
+}
+
+.modal-logo-lettering {
+    margin-top: -1.8rem;
+    font-size: .7rem;
 }
 
 .open-menu {
@@ -210,17 +240,23 @@ nav a:hover {
 /* Media query for cellphones */
 @media (max-width: 640px) {
     .logo-number {
-        font-size: 11rem;
+        font-size: 5rem;
     }
     .logo-lettering {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-top: -15px;
     }
 }
 
 /* Media query for tablets */
 @media (min-width: 641px) and (max-width: 1024px) {
     .logo-number {
-        font-size: 13rem;
+        font-size: 7rem;
+    }
+
+    .logo-lettering {
+        font-size: 2rem;
+        margin-top: -15px;
     }
 }
 

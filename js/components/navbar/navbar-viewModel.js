@@ -34,7 +34,7 @@ class Navbar extends HTMLElement {
                 linkShop.className = 'navbar-link scrolledText';
                 linkAbout.className = 'navbar-link scrolledText';
                 logo.className = 'logo scrolledLogo';
-                logoResponsive.className ='scrolledText';
+                logoResponsive.className ='navbar-responsive-logo scrolledText';
 
                 svgPaths.forEach(path => {
                     path.setAttribute('stroke', '#000');
@@ -44,7 +44,7 @@ class Navbar extends HTMLElement {
                 linkShop.className = 'navbar-link';
                 linkAbout.className = 'navbar-link';
                 logo.className = 'logo';
-                logoResponsive.className ='navbar-responsive-logo';
+                logoResponsive.className ='navbar-responsive-logo none';
                 
                 svgPaths.forEach(path => {
                     path.setAttribute('stroke', '#fff');
@@ -58,6 +58,7 @@ class Navbar extends HTMLElement {
         this.root.querySelector("#menu_close").addEventListener("click", this.handleCloseEvent);
         this.root.querySelector("#link-shop").addEventListener("click", this.handleShopLinkClick);
         this.root.querySelector("#link-logo").addEventListener("click", this.handleLogoLinkClick);
+        this.root.querySelector("#link-about").addEventListener("click", this.handleAboutLinkClick);
     }
 
     /**
@@ -92,6 +93,16 @@ class Navbar extends HTMLElement {
      * @param {Event} event 
      */
     handleLogoLinkClick = (event) => {
+        const modal = this.root.querySelector('#modal');
+        modal.className = 'modal close-menu';
+    }
+
+    /**
+     * 
+     * @param {Event} event 
+     */
+    handleAboutLinkClick = (event) => {
+        console.log('click')
         const modal = this.root.querySelector('#modal');
         modal.className = 'modal close-menu';
     }
