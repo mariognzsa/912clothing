@@ -102,7 +102,6 @@ class Navbar extends HTMLElement {
      * @param {Event} event 
      */
     handleAboutLinkClick = (event) => {
-        console.log('click')
         const modal = this.root.querySelector('#modal');
         modal.className = 'modal close-menu';
     }

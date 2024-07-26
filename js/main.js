@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCustomComponents();
     $("#loading_spinner").show();
     window.onload = () => {
-        // console.log("Page loaded");
         $('#loading_spinner').hide();
         $('#app').show();
     }

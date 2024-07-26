@@ -8,17 +8,16 @@ template.innerHTML =`
 <div class="shop-container">
     <div class="shop-top-container">
         <div class="dropdown-box">
-            <div class="dropdown">
+            <div id="dropdown-collections" class="dropdown">
                 <button class="dropbtn">
                     <span class="dropdown-text">Collections</span>
-                    <i class="material-icons">expand_more</i>
+                    <i class="material-icons dropdown-icon">expand_more</i>
                 </button>
-                <div class="dropdown-content">
-                    <a id="filter-all" class="dropdown-text">All</a>
-                    <a id="filter-s1" class="dropdown-text">Season 1</a>
-                    <a id="filter-s2" class="dropdown-text">Season 2</a>
-                    <a id="filter-s3" class="dropdown-text">Season 3</a>
+                <div id="dropdown-collections-content" class="dropdown-content">
                     <a id="filter-s4" class="dropdown-text">Season 4</a>
+                    <a id="filter-s3" class="dropdown-text">Season 3</a>
+                    <a id="filter-s2" class="dropdown-text">Season 2</a>
+                    <a id="filter-s1" class="dropdown-text">Season 1</a>
                 </div>
             </div>
         </div>
@@ -28,6 +27,7 @@ template.innerHTML =`
                 <i class="material-icons search-icon">search</i>
             </button>
         </div>
+        <p id="search_season" class="badge-search-season">Search season</p>
     </div>
     <div id="shop-product-container" class="shop-bottom-container">
     

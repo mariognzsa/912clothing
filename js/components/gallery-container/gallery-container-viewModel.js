@@ -28,8 +28,7 @@ class GalleryContainer extends HTMLElement {
      * Gets called every time a defined attribute changes
      */
     attributeChangedCallback(attrName, oldVal, newVal) {
-        // console.log("Attribute changed", attrName, oldVal, newVal);
-        
+        // pass
     }
 
     /**

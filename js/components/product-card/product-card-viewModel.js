@@ -30,7 +30,6 @@ class ProductCard extends HTMLElement {
      * Gets called every time a defined attribute changes
      */
     attributeChangedCallback(attrName, oldVal, newVal) {
-        // console.log("Attribute changed", attrName, oldVal, newVal);
         if(attrName.toLowerCase() === "title") {
             const div = this.root.querySelector(".product-card-container");
             let p = div.querySelector("#product_name") 
@@ -155,6 +154,7 @@ class ProductCard extends HTMLElement {
         }
         this.root.querySelector("#product_button").className = "product-button-modal product-button";
         this.root.querySelector("#product_terms").className = "pc-info-item-terms";
+        this.root.querySelector("#product_info_top").className = "pc-top-container-modal";
     }
 
     /**
@@ -173,7 +173,6 @@ class ProductCard extends HTMLElement {
      * @param {*} event 
      */
     handleClickCard = (event) => {
-        // console.log(event)
         const customEvent = new CustomEvent("clickCard", {
             detail: {
                 id: this.getAttribute("id"),
@@ -187,7 +186,6 @@ class ProductCard extends HTMLElement {
                 imageback: this.getAttribute("imageback"),
             }
         });
-        // console.log("dispatch", customEvent);
         this.root.dispatchEvent(customEvent);
     }
 
@@ -195,9 +193,7 @@ class ProductCard extends HTMLElement {
      * 
      */
     handleCloseModal = (event) => {
-        // console.log(event)
         const customEvent = new Event("closeCard");
-        // console.log("dispatch", customEvent);
         this.root.dispatchEvent(customEvent);
     }
 
@@ -221,7 +217,6 @@ class ProductCard extends HTMLElement {
      * 
      */
     handleFlipCard = () => {
-        // console.log("Flipping image", this.flippedImageFlag)
         this.root.querySelector(".flip-image").className = (this.flippedImageFlag?
             "flip-image flip-image-hover" :
             "flip-image");
@@ -248,7 +243,6 @@ class ProductCard extends HTMLElement {
      * 
      */
     handleLoadingState = () => {
-        // console.log("Product card loaded");
         // this.root.querySelector("#loading-icon").className = "hidden";
         // this.root.querySelector("#product_card").className = "product-card-container";
     }
