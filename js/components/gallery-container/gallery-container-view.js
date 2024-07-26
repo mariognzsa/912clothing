@@ -1,6 +1,6 @@
 
 const template = document.createElement("template");
-template.innerHTML =`
+template.innerHTML = `
 <style>
     @import url("js/components/gallery-container/gallery-container-styles.css");
 </style>
@@ -91,6 +91,15 @@ template.innerHTML =`
         <div class="caption">
             <p class="logo-number">912</p>
             <p class="opacity-low">Nine twelve</p>
+        </div>
+    </div> 
+    </div>
+    <div class="img-box">
+    <video autoplay muted loop playsinline src="src/img/gallery/10.mp4"></video>
+    <div class="transparent-box">
+        <div class="description">
+        <p class="logo-number">912</p>
+        <p class="opacity-low">Season 4. New clothing. Buy now.</p>
         </div>
     </div> 
     </div>

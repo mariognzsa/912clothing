@@ -1,3 +1,5 @@
+//<h4 class="navbar-logo-lettering">nine twelve</h4>
+
 const navbar = document.createElement("navbar");
 navbar.innerHTML =`
 <style>
@@ -15,7 +17,6 @@ navbar.innerHTML =`
         <div class="navbar-responsive">
             <a id="navbar_responsive_logo" class="navbar-responsive-logo none" href="#navbar-section">
                 <h1 class="navbar-logo-number">912</h1>
-                <h4 class="navbar-logo-lettering">nine twelve</h4>
             </a>
 
             <button class="menu-button" type="button" id="menu_open">

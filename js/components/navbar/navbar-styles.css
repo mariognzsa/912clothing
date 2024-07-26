@@ -103,7 +103,7 @@ nav a:hover {
 }
 
 .navbar-logo-number {
-    padding-top: 1rem;
+    padding-top: auto;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5rem;
     text-align: center;
