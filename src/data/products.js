@@ -190,6 +190,145 @@ const products =
             "src/img/11/11_back.webp"
         ]
     },
+    {
+        "id": 12,
+        "title": "Sexual Matters",
+        "description": "Oversize, Combed cotton fabric.",
+        "price": 299,
+        "discount": 0,
+        "season_released": "4",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/12/12_front.webp",
+            "src/img/12/12_back.webp"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Face Me",
+        "description": "Oversize, Combed cotton fabric.",
+        "price": 459,
+        "discount": 0,
+        "season_released": "4",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/13/13_front.webp",
+            "src/img/13/13_back.webp"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Hate and Hurt",
+        "description": "Oversize, Combed cotton fabric.",
+        "price": 379,
+        "discount": 0,
+        "season_released": "4",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/14/14_front.webp",
+            "src/img/14/14_back.webp"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Make me violent",
+        "description": "Oversize, Combed cotton fabric.",
+        "price": 329,
+        "discount": 0,
+        "season_released": "4",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/15/15_front.webp",
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Intentions",
+        "description": "Crop top, Cotton fabric.",
+        "price": 299,
+        "discount": 0,
+        "season_released": "4",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/16/16_front.webp",
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Sexual Matters Top",
+        "description": "Crop top, Cotton fabric.",
+        "price": 299,
+        "discount": 0,
+        "season_released": "4",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/17/17_front.webp",
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Hate and Hurt Top",
+        "description": "Crop top, Cotton fabric.",
+        "price": 299,
+        "discount": 0,
+        "season_released": "4",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/18/18_front.webp",
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Blood Spilled",
+        "description": "Crop top, Cotton fabric.",
+        "price": 299,
+        "discount": 0,
+        "season_released": "4",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/19/19_front.webp",
+        ]
+    },
     // {
     //     "id": 12,
     //     "title": "Six sex special edition",
