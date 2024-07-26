@@ -86,7 +86,7 @@ template.innerHTML = `
     </div> 
     </div>
     <div class="img-box">
-    <img src="src/img/gallery/9.webp" alt="" />
+    <img src="src/img/gallery/9.webp" class="zoom" alt="" />
     <div class="transparent-box">
         <div class="caption">
             <p class="logo-number">912</p>
