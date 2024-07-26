@@ -194,7 +194,7 @@ const products =
         "id": 12,
         "title": "Sexual Matters",
         "description": "Oversize, Combed cotton fabric.",
-        "price": 299,
+        "price": 379,
         "discount": 0,
         "season_released": "4",
         "extras": "",
