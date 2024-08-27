@@ -96,6 +96,11 @@
     margin-top: 0px;
 }
 
+.pc-info-item-terms-link {
+    color: #000;
+    font-weight: 700;
+}
+
 .pc-info-item-bold {
     padding-left: 10px;
     padding-top: 5px;
