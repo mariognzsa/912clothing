@@ -127,7 +127,7 @@ const products =
         "id": 8,
         "title": "Cops",
         "description": "Crop top, Cotton fabric",
-        "price": 259,
+        "price": 319,
         "discount": 0,
         "season_released": "3",
         "extras": "sticker_pack",
@@ -144,7 +144,7 @@ const products =
         "id": 9,
         "title": "Dear god",
         "description": "Crop top, Cotton fabric",
-        "price": 259,
+        "price": 319,
         "discount": 0,
         "season_released": "3",
         "extras": "sticker_pack",
@@ -161,7 +161,7 @@ const products =
         "id": 10,
         "title": "Lips",
         "description": "Crop top, Cotton fabric",
-        "price": 259,
+        "price": 319,
         "discount": 0,
         "season_released": "3",
         "extras": "sticker_pack",
@@ -248,7 +248,7 @@ const products =
         "id": 15,
         "title": "Make me violent",
         "description": "Oversize, Combed cotton fabric.",
-        "price": 329,
+        "price": 319,
         "discount": 0,
         "season_released": "4",
         "extras": "",
@@ -265,7 +265,7 @@ const products =
         "id": 16,
         "title": "Intentions",
         "description": "Crop top, Cotton fabric.",
-        "price": 299,
+        "price": 319,
         "discount": 0,
         "season_released": "4",
         "extras": "",
@@ -282,7 +282,7 @@ const products =
         "id": 17,
         "title": "Sexual Matters Top",
         "description": "Crop top, Cotton fabric.",
-        "price": 299,
+        "price": 319,
         "discount": 0,
         "season_released": "4",
         "extras": "",
@@ -299,7 +299,7 @@ const products =
         "id": 18,
         "title": "Hate and Hurt Top",
         "description": "Crop top, Cotton fabric.",
-        "price": 299,
+        "price": 319,
         "discount": 0,
         "season_released": "4",
         "extras": "",
@@ -316,7 +316,7 @@ const products =
         "id": 19,
         "title": "Blood Spilled",
         "description": "Crop top, Cotton fabric.",
-        "price": 299,
+        "price": 319,
         "discount": 0,
         "season_released": "4",
         "extras": "",
@@ -327,6 +327,57 @@ const products =
         ],
         "images": [
             "src/img/19/19_front.webp",
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Top Dirty",
+        "description": "Crop top, Cotton fabric.",
+        "price": 319,
+        "discount": 0,
+        "season_released": "2",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/20/20_front.webp",
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Top Forgiving",
+        "description": "Crop top, Cotton fabric.",
+        "price": 319,
+        "discount": 0,
+        "season_released": "2",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/22/22_front.webp",
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Top Ramirez",
+        "description": "Crop top, Cotton fabric.",
+        "price": 319,
+        "discount": 0,
+        "season_released": "2",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/21/21_front.webp",
         ]
     },
     // {
