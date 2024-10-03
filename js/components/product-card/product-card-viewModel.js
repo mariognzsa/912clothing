@@ -95,10 +95,14 @@ class ProductCard extends HTMLElement {
                 p.textContent = '';
                 p.append(previousPrice);
                 p.append(currentPrice);
-                // 
+                // soldout on button
                 const soldButton = this.root.querySelector("#product_button");
                 soldButton.className = "product-button-disabled pc-info-item";
                 soldButton.textContent = "SOLD OUT";
+                // soldout badge
+                const soldoutBadge = this.root.querySelector("#product_soldout");
+                soldoutBadge.className = "text-title pc-soldout-item";
+                soldoutBadge.textContent = "SOLD OUT";
             }
             
         }
@@ -197,7 +201,12 @@ class ProductCard extends HTMLElement {
         if(this.getAttribute("extras") === 'sticker_pack'){
             this.root.querySelector("#product_extra").className = "text-title pc-extra-item";
         }
-        if(Number(this.getAttribute("discount")) === 100){
+        if(Number(this.getAttribute("discount")) > 0 && Number(this.getAttribute("discount")) !== 100){
+            this.root.querySelector("#product_discount").className = "text-title pc-discount-item-modal";
+            this.root.querySelector("#product_button").className = "product-button-modal product-button";
+        }
+        else if(Number(this.getAttribute("discount")) === 100){
+            this.root.querySelector("#product_soldout").className = "text-title pc-soldout-item-modal";
             this.root.querySelector("#product_button").className = "product-button-modal product-button-disabled";
         }
         else {

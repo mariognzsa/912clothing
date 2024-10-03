@@ -27,6 +27,7 @@ template.innerHTML =`
         <div id="product_info_top" class="pc-top-container">
             <p id="product_name" class="text-title pc-top-item">Product name</p>
             <p id="product_discount" class="text-title hidden pc-discount-item">Product discount</p>
+            <p id="product_soldout" class="text-title hidden pc-soldout-item">Product soldout</p>
             <p id="product_season" class="text-title pc-season-item">Product season</p>
         </div>
         <p id="product_description" class="text-subtitle pc-info-item hidden">Item description</p>
