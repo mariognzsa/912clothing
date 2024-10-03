@@ -251,6 +251,19 @@
     transition: background-color 0.4s ease-in-out;
 }
 
+.product-button-disabled {
+    background-color: rgb(111, 111, 111); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: not-allowed;
+}
+
 .product-button:hover {
     background-color: rgba(100, 100, 100, 0.8);
     color:black;

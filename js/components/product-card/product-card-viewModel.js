@@ -81,6 +81,7 @@ class ProductCard extends HTMLElement {
                 discountBadge.textContent = newVal + "% OFF";
             }
             else if(Number(newVal) === 100) {
+                // Provisional soldout logic added when discount equals 100
                 const div = this.root.querySelector(".product-card-container");
                 let p = div.querySelector("#product_price") 
                 ? div.querySelector("#product_price") 
@@ -94,6 +95,10 @@ class ProductCard extends HTMLElement {
                 p.textContent = '';
                 p.append(previousPrice);
                 p.append(currentPrice);
+                // 
+                const soldButton = this.root.querySelector("#product_button");
+                soldButton.className = "product-button-disabled pc-info-item";
+                soldButton.textContent = "SOLD OUT";
             }
             
         }
@@ -192,7 +197,12 @@ class ProductCard extends HTMLElement {
         if(this.getAttribute("extras") === 'sticker_pack'){
             this.root.querySelector("#product_extra").className = "text-title pc-extra-item";
         }
-        this.root.querySelector("#product_button").className = "product-button-modal product-button";
+        if(Number(this.getAttribute("discount")) === 100){
+            this.root.querySelector("#product_button").className = "product-button-modal product-button-disabled";
+        }
+        else {
+            this.root.querySelector("#product_button").className = "product-button-modal product-button";
+        }
         this.root.querySelector("#product_terms").className = "pc-info-item-terms";
         this.root.querySelector("#product_info_top").className = "pc-top-container-modal";
     }
@@ -242,16 +252,18 @@ class ProductCard extends HTMLElement {
      * 
      */
     handleClickButton = () => {
-        const api_url = "https://api.whatsapp.com/send?";
-        const phone = "524491205859";
-        const text = encodeURI(`Hello, i'm interested on the item:
-        ${this.getAttribute("title")}
-        ${this.getAttribute("description")}
-        Price ${this.getAttribute("price")}
-        Size ${this.getSelectedSize()}
-        `);
-        const target_url = `${api_url}phone=${phone}&text=${text}`;
-        window.open(target_url, "_blank").focus();
+        if(Number(this.getAttribute('discount')) !== 100){
+            const api_url = "https://api.whatsapp.com/send?";
+            const phone = "524491205859";
+            const text = encodeURI(`Hello, i'm interested on the item:
+            ${this.getAttribute("title")}
+            ${this.getAttribute("description")}
+            Price ${this.getAttribute("price")}
+            Size ${this.getSelectedSize()}
+            `);
+            const target_url = `${api_url}phone=${phone}&text=${text}`;
+            window.open(target_url, "_blank").focus();
+        }
     }
 
     /**
