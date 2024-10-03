@@ -5,7 +5,7 @@ const products =
         "title": "Traumatismo",
         "description": "Oversize, Combed cotton fabric",
         "price": 349,
-        "discount": 0,
+        "discount": 100,
         "season_released": "1",
         "extras": "sticker_pack",
         "sizes": [
@@ -22,7 +22,7 @@ const products =
         "title": "Dirty",
         "description": "Oversize, Combed cotton fabric",
         "price": 349,
-        "discount": 0,
+        "discount": 20,
         "season_released": "2",
         "extras": "sticker_pack",
         "sizes": [
@@ -40,7 +40,7 @@ const products =
         "title": "Forgiving",
         "description": "Oversize, Combed cotton fabric",
         "price": 349,
-        "discount": 0,
+        "discount": 10,
         "season_released": "2",
         "extras": "sticker_pack",
         "sizes": [
@@ -58,7 +58,7 @@ const products =
         "title": "Ramirez",
         "description": "Oversize, Combed cotton fabric",
         "price": 349,
-        "discount": 0,
+        "discount": 100,
         "season_released": "2",
         "extras": "sticker_pack",
         "sizes": [
@@ -195,7 +195,7 @@ const products =
         "title": "Sexual Matters",
         "description": "Oversize, Combed cotton fabric.",
         "price": 379,
-        "discount": 0,
+        "discount": 40,
         "season_released": "4",
         "extras": "",
         "sizes": [
@@ -334,7 +334,7 @@ const products =
         "title": "Top Dirty",
         "description": "Crop top, Cotton fabric.",
         "price": 319,
-        "discount": 0,
+        "discount": 20,
         "season_released": "2",
         "extras": "",
         "sizes": [
@@ -351,7 +351,7 @@ const products =
         "title": "Top Forgiving",
         "description": "Crop top, Cotton fabric.",
         "price": 319,
-        "discount": 0,
+        "discount": 25,
         "season_released": "2",
         "extras": "",
         "sizes": [
@@ -368,7 +368,7 @@ const products =
         "title": "Top Ramirez",
         "description": "Crop top, Cotton fabric.",
         "price": 319,
-        "discount": 0,
+        "discount": 45,
         "season_released": "2",
         "extras": "",
         "sizes": [

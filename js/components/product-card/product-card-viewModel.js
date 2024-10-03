@@ -23,7 +23,7 @@ class ProductCard extends HTMLElement {
      * @returns 
      */
     static get observedAttributes() {
-        return ["title", "price", "description", "size", "season", "extras", "imagefront", "imageback", "type"];
+        return ["title", "price", "discount", "description", "size", "season", "extras", "imagefront", "imageback", "type"];
     }
 
     /**
@@ -35,7 +35,7 @@ class ProductCard extends HTMLElement {
             let p = div.querySelector("#product_name") 
             ? div.querySelector("#product_name") 
             : document.createElement("p");
-            p.className = "text-title pc-info-item";
+            p.className = "text-title pc-top-item";
             p.textContent = newVal;
             // div.querySelector(".product-card-info").append(p);
         }
@@ -56,6 +56,46 @@ class ProductCard extends HTMLElement {
             p.className = "text-subtitle pc-info-item";
             p.textContent = newVal;
             // div.querySelector(".product-card-info").append(p);
+        }
+        else if(attrName.toLowerCase() === 'discount'){
+            if(Number(newVal) > 0 && Number(newVal) !== 100){
+                const div = this.root.querySelector(".product-card-container");
+                let p = div.querySelector("#product_price") 
+                ? div.querySelector("#product_price") 
+                : document.createElement("p");
+                p.className = "text-subtitle pc-info-item";
+                const previousPrice = document.createElement('s');
+                const currentPrice = document.createElement('b');
+                const priceNumber = parseInt(this.getAttribute('price').replace('$ ', ''));
+                previousPrice.textContent = p.textContent;
+                previousPrice.className = "text-disabled";
+                currentPrice.textContent = " $" + (priceNumber - (priceNumber * (parseInt(this.getAttribute('discount')) / 100))).toString();
+                p.textContent = '';
+                p.append(previousPrice);
+                p.append(currentPrice);
+
+                let discountBadge = div.querySelector("#product_discount") 
+                ? div.querySelector("#product_discount") 
+                : document.createElement("p");
+                discountBadge.className = "text-title pc-discount-item";
+                discountBadge.textContent = newVal + "% OFF";
+            }
+            else if(Number(newVal) === 100) {
+                const div = this.root.querySelector(".product-card-container");
+                let p = div.querySelector("#product_price") 
+                ? div.querySelector("#product_price") 
+                : document.createElement("p");
+                p.className = "text-subtitle pc-info-item";
+                const previousPrice = document.createElement('s');
+                const currentPrice = document.createElement('b');
+                previousPrice.textContent = p.textContent;
+                previousPrice.className = "text-disabled";
+                currentPrice.textContent = " SOLD OUT";
+                p.textContent = '';
+                p.append(previousPrice);
+                p.append(currentPrice);
+            }
+            
         }
         else if(attrName.toLowerCase() === "size") {
             const div = this.root.querySelector(".product-card-container");
@@ -182,6 +222,7 @@ class ProductCard extends HTMLElement {
                 season: this.getAttribute("season"),
                 extras: this.getAttribute("extras"),
                 price: this.getAttribute("price"),
+                discount: this.getAttribute("discount"),
                 imagefront: this.getAttribute("imagefront"),
                 imageback: this.getAttribute("imageback"),
             }
@@ -276,6 +317,17 @@ class ProductCard extends HTMLElement {
 
     set price(value) {
         this.setAttribute("price", value);
+    }
+
+    /**
+     * 
+     */
+    get discount() {
+        return this.getAttribute("discount");
+    }
+
+    set discount(value) {
+        this.setAttribute("discount", value);
     }
 
     /**

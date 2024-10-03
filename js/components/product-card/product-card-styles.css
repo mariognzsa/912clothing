@@ -112,6 +112,7 @@
 
 .pc-top-container-modal {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -120,15 +121,31 @@
     padding-top: 5px;
     margin-bottom: 5px;
     margin-top: 0px;
+    flex-grow: 2;
 }
 
 .pc-season-item {
     padding: 6px;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    margin-left: 6px;
+    margin-right: 6px;
+    align-self: flex-end;
     margin-top: 0px;
     font-size: 12px !important;
     font-weight: 300 !important;
     background-color: #434343;
+    color: white;
+    border-radius: 5px;
+}
+
+.pc-discount-item {
+    padding: 6px;
+    /* margin-bottom: 5px; */
+    align-self: flex-end;
+    margin-top: 0px;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    background-color: #860000;
     color: white;
     border-radius: 5px;
 }
@@ -214,6 +231,10 @@
 .product-image {
     width: var(--product-image-width);
     height: var(--product-image-height);
+}
+
+.text-disabled {
+    color: #565656;
 }
 
 .product-button {
