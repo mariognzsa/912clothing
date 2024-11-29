@@ -1,0 +1,36 @@
+:root {
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	margin: 0px;
+	padding: 0px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.text-title {
+	font-size: 2rem;
+	font-weight: 300;
+}
+
+.text-subtitle {
+	font-size: 1.5rem;
+}
+
+.loading-spinner {
+	position: fixed;
+	top: 0; left: 0; z-index: 999;
+	width: 100vw; height: 100vh;
+   
+	background-color: white;
+	background-image: url("/src/img/spinner4.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+}
