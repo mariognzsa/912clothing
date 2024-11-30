@@ -23,7 +23,7 @@ class ProductCard extends HTMLElement {
      * @returns 
      */
     static get observedAttributes() {
-        return ["title", "price", "description", "size", "season", "extras", "imagefront", "imageback", "type"];
+        return ["title", "price", "discount", "description", "size", "season", "extras", "imagefront", "imageback", "type"];
     }
 
     /**
@@ -35,7 +35,7 @@ class ProductCard extends HTMLElement {
             let p = div.querySelector("#product_name") 
             ? div.querySelector("#product_name") 
             : document.createElement("p");
-            p.className = "text-title pc-info-item";
+            p.className = "text-title pc-top-item";
             p.textContent = newVal;
             // div.querySelector(".product-card-info").append(p);
         }
@@ -56,6 +56,57 @@ class ProductCard extends HTMLElement {
             p.className = "text-subtitle pc-info-item";
             p.textContent = newVal;
             // div.querySelector(".product-card-info").append(p);
+        }
+        else if(attrName.toLowerCase() === 'discount'){
+            if(Number(newVal) > 0 && Number(newVal) !== 100){
+                const div = this.root.querySelector(".product-card-container");
+                let p = div.querySelector("#product_price") 
+                ? div.querySelector("#product_price") 
+                : document.createElement("p");
+                p.className = "text-subtitle pc-info-item";
+                const previousPrice = document.createElement('s');
+                const currentPrice = document.createElement('b');
+                const priceNumber = parseFloat(this.getAttribute('price').replace('$ ', ''));
+                previousPrice.textContent = p.textContent;
+                previousPrice.className = "text-disabled";
+                const discountNumber = parseFloat(this.getAttribute('discount'));
+                const discountPriceNumber = priceNumber * ((discountNumber) / 100);
+                currentPrice.textContent = " $" + Math.trunc(priceNumber - discountPriceNumber).toString();
+                p.textContent = '';
+                p.append(previousPrice);
+                p.append(currentPrice);
+
+                let discountBadge = div.querySelector("#product_discount") 
+                ? div.querySelector("#product_discount") 
+                : document.createElement("p");
+                discountBadge.className = "text-title pc-discount-item";
+                discountBadge.textContent = Math.trunc(parseInt(newVal)).toString() + "% OFF";
+            }
+            else if(Number(newVal) === 100) {
+                // Provisional soldout logic added when discount equals 100
+                const div = this.root.querySelector(".product-card-container");
+                let p = div.querySelector("#product_price") 
+                ? div.querySelector("#product_price") 
+                : document.createElement("p");
+                p.className = "text-subtitle pc-info-item";
+                const previousPrice = document.createElement('s');
+                const currentPrice = document.createElement('b');
+                previousPrice.textContent = p.textContent;
+                previousPrice.className = "text-disabled";
+                currentPrice.textContent = " SOLD OUT";
+                p.textContent = '';
+                p.append(previousPrice);
+                p.append(currentPrice);
+                // soldout on button
+                const soldButton = this.root.querySelector("#product_button");
+                soldButton.className = "product-button-disabled pc-info-item";
+                soldButton.textContent = "SOLD OUT";
+                // soldout badge
+                const soldoutBadge = this.root.querySelector("#product_soldout");
+                soldoutBadge.className = "text-title pc-soldout-item";
+                soldoutBadge.textContent = "SOLD OUT";
+            }
+            
         }
         else if(attrName.toLowerCase() === "size") {
             const div = this.root.querySelector(".product-card-container");
@@ -152,7 +203,17 @@ class ProductCard extends HTMLElement {
         if(this.getAttribute("extras") === 'sticker_pack'){
             this.root.querySelector("#product_extra").className = "text-title pc-extra-item";
         }
-        this.root.querySelector("#product_button").className = "product-button-modal product-button";
+        if(Number(this.getAttribute("discount")) > 0 && Number(this.getAttribute("discount")) !== 100){
+            this.root.querySelector("#product_discount").className = "text-title pc-discount-item-modal";
+            this.root.querySelector("#product_button").className = "product-button-modal product-button";
+        }
+        else if(Number(this.getAttribute("discount")) === 100){
+            this.root.querySelector("#product_soldout").className = "text-title pc-soldout-item-modal";
+            this.root.querySelector("#product_button").className = "product-button-modal product-button-disabled";
+        }
+        else {
+            this.root.querySelector("#product_button").className = "product-button-modal product-button";
+        }
         this.root.querySelector("#product_terms").className = "pc-info-item-terms";
         this.root.querySelector("#product_info_top").className = "pc-top-container-modal";
     }
@@ -182,6 +243,7 @@ class ProductCard extends HTMLElement {
                 season: this.getAttribute("season"),
                 extras: this.getAttribute("extras"),
                 price: this.getAttribute("price"),
+                discount: this.getAttribute("discount"),
                 imagefront: this.getAttribute("imagefront"),
                 imageback: this.getAttribute("imageback"),
             }
@@ -201,16 +263,19 @@ class ProductCard extends HTMLElement {
      * 
      */
     handleClickButton = () => {
-        const api_url = "https://api.whatsapp.com/send?";
-        const phone = "524491205859";
-        const text = encodeURI(`Hello, i'm interested on the item:
-        ${this.getAttribute("title")}
-        ${this.getAttribute("description")}
-        Price ${this.getAttribute("price")}
-        Size ${this.getSelectedSize()}
-        `);
-        const target_url = `${api_url}phone=${phone}&text=${text}`;
-        window.open(target_url, "_blank").focus();
+        if(Number(this.getAttribute('discount')) !== 100){
+            const api_url = "https://api.whatsapp.com/send?";
+            const phone = "524491205859";
+            const text = encodeURI(`Hello, i'm interested on the item:
+            ${this.getAttribute("title")}
+            ${this.getAttribute("description")}
+            Price ${this.getAttribute("price")}
+            Discount ${this.getAttribute("discount")}
+            Size ${this.getSelectedSize()}
+            `);
+            const target_url = `${api_url}phone=${phone}&text=${text}`;
+            window.open(target_url, "_blank").focus();
+        }
     }
 
     /**
@@ -276,6 +341,17 @@ class ProductCard extends HTMLElement {
 
     set price(value) {
         this.setAttribute("price", value);
+    }
+
+    /**
+     * 
+     */
+    get discount() {
+        return this.getAttribute("discount");
+    }
+
+    set discount(value) {
+        this.setAttribute("discount", value);
     }
 
     /**

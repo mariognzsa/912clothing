@@ -39,6 +39,7 @@ class ShopContainer extends HTMLElement {
                 product.season = "Collection " + item.season_released;
                 product.extras = item.extras;
                 product.price = `$ ${item.price}.00`;
+                product.discount = item.discount;
                 product.size = item.sizes.join(",");
                 product.imagefront = item.images[0]? item.images[0] : '';
                 product.imageback = item.images[1]? item.images[1] : '';
@@ -165,6 +166,7 @@ class ShopContainer extends HTMLElement {
         const product = document.createElement("product-card");
         product.title = event.detail.title;
         product.price = event.detail.price;
+        product.discount = event.detail.discount;
         product.description = event.detail.description;
         product.size = event.detail.size;
         product.season = event.detail.season;
