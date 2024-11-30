@@ -270,6 +270,7 @@ class ProductCard extends HTMLElement {
             ${this.getAttribute("title")}
             ${this.getAttribute("description")}
             Price ${this.getAttribute("price")}
+            Discount ${this.getAttribute("discount")}
             Size ${this.getSelectedSize()}
             `);
             const target_url = `${api_url}phone=${phone}&text=${text}`;
