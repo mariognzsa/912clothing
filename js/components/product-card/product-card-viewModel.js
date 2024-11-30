@@ -66,10 +66,12 @@ class ProductCard extends HTMLElement {
                 p.className = "text-subtitle pc-info-item";
                 const previousPrice = document.createElement('s');
                 const currentPrice = document.createElement('b');
-                const priceNumber = parseInt(this.getAttribute('price').replace('$ ', ''));
+                const priceNumber = parseFloat(this.getAttribute('price').replace('$ ', ''));
                 previousPrice.textContent = p.textContent;
                 previousPrice.className = "text-disabled";
-                currentPrice.textContent = " $" + (priceNumber - (priceNumber * (parseInt(this.getAttribute('discount')) / 100))).toString();
+                const discountNumber = parseFloat(this.getAttribute('discount'));
+                const discountPriceNumber = priceNumber * ((discountNumber) / 100);
+                currentPrice.textContent = " $" + Math.trunc(priceNumber - discountPriceNumber).toString();
                 p.textContent = '';
                 p.append(previousPrice);
                 p.append(currentPrice);
@@ -78,7 +80,7 @@ class ProductCard extends HTMLElement {
                 ? div.querySelector("#product_discount") 
                 : document.createElement("p");
                 discountBadge.className = "text-title pc-discount-item";
-                discountBadge.textContent = newVal + "% OFF";
+                discountBadge.textContent = Math.trunc(parseInt(newVal)).toString() + "% OFF";
             }
             else if(Number(newVal) === 100) {
                 // Provisional soldout logic added when discount equals 100
