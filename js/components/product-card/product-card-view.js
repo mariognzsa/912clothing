@@ -26,6 +26,8 @@ template.innerHTML =`
     <div class="product-card-info">
         <div id="product_info_top" class="pc-top-container">
             <p id="product_name" class="text-title pc-top-item">Product name</p>
+            <p id="product_discount" class="text-title hidden pc-discount-item">Product discount</p>
+            <p id="product_soldout" class="text-title hidden pc-soldout-item">Product soldout</p>
             <p id="product_season" class="text-title pc-season-item">Product season</p>
         </div>
         <p id="product_description" class="text-subtitle pc-info-item hidden">Item description</p>
@@ -38,7 +40,7 @@ template.innerHTML =`
             <a id="product_button" class="product-button pc-info-item">Order now</a>
         </div>
         <p id="product_terms" class="pc-info-item-terms hidden">
-            BY MAKING A PURCHASE FROM NINE TWELVE, CUSTOMERS ACCEPT AND AGREE TO BE BOUND BY THESE <a id="product_terms_link" href="#terms-section">TERMS AND CONDITIONS</a>.
+            BY MAKING A PURCHASE FROM NINE TWELVE, CUSTOMERS ACCEPT AND AGREE TO BE BOUND BY THESE <a id="product_terms_link" class="pc-info-item-terms-link" href="#terms-section">TERMS AND CONDITIONS</a>.
         </p>
     </div>
 </div>
