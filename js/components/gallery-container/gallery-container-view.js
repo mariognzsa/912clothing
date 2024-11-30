@@ -64,6 +64,8 @@ template.innerHTML = `
         </div>
     </div> 
     </div>
+    
+    </div>
 </div>
 
 `;

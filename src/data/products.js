@@ -74,7 +74,7 @@ const products =
         "id": 4,
         "title": "Dear God",
         "description": "Oversize, Cotton fabric/Polyester",
-        "price": 449,
+        "price": 439,
         "discount": 0,
         "season_released": "3",
         "extras": "sticker_pack",
