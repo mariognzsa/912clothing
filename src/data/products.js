@@ -1,6 +1,6 @@
 const products =
 [
-    {
+    /*{
         "id": 7,
         "title": "Traumatismo",
         "description": "Oversize, Combed cotton fabric",
@@ -380,22 +380,203 @@ const products =
             "src/img/21/21_front.webp",
         ]
     },
-    // {
-    //     "id": 12,
-    //     "title": "Six sex special edition",
-    //     "description": "Sticker pack collection 01, 02, 03",
-    //     "price": 50,
-    //     "discount": 0,
-    //     "season_released": "4",
-    //     "extras": "",
-    //     "sizes": [
-    //         "Unisize"
-    //     ],
-    //     "images": [
-    //         "src/img/11/11_front.webp",
-    //         "src/img/11/11_back.webp"
-    //     ]
-    // },
+     {
+         "id": 12,
+         "title": "Six sex special edition",
+         "description": "Sticker pack collection 01, 02, 03",
+         "price": 50,
+         "discount": 0,
+         "season_released": "4",
+         "extras": "",
+         "sizes": [
+             "Unisize"
+         ],
+         "images": [
+             "src/img/11/11_front.webp",
+             "src/img/11/11_back.webp"
+         ]
+    },*/
+    {
+        "id": 23,
+        "title": "@",
+        "description": "Crop top, Cotton fabric.",
+        "price": 300,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/23/23_front.jpg"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "⚚ 01 ⚚",
+        "description": "100% leather jacket, screen printed",
+        "price": 3000,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/24/24_front.jpg",
+            "src/img/24/24_back.jpg"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "⚚ 02 ⚚",
+        "description": "Denim jacket screen printed",
+        "price": 2000,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/25/25_front.jpg",
+            "src/img/25/25_back.jpg"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "⚚ 03 ⚚",
+        "description": "100% cotton dress shirt, screen printed",
+        "price": 3000,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/26/26_front.jpg"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "⚚ 04 ⚚",
+        "description": "Denim pants, screen printed",
+        "price": 2000,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/27/27_front.jpg",
+        ]
+    },
+    {
+        "id": 28,
+        "title": "⚚ 05 ⚚",
+        "description": "100% leather jacket, screen printed",
+        "price": 3000,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/28/28_front.jpg",
+            "src/img/28/28_back.jpg"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "99Allah",
+        "description": "crop top, screen printed",
+        "price": 350,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/29/29_front.jpg",
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Alquimia",
+        "description": "screen printed",
+        "price": 400,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/30/30_front.jpg",
+            "src/img/30/30_side.jpg"
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Carne",
+        "description": "Crop top, Cotton fabric",
+        "price": 400,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/31/31_front.jpg",
+            "src/img/31/31_back.jpg"
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Revelaciones",
+        "description": "Cotton 260 gms, screen printed",
+        "price": 500,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ],
+        "images": [
+            "src/img/32/32_front.jpg",
+            "src/img/32/32_back.jpg"
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Sin remordimiento",
+        "description": "Embroidery design",
+        "price": 350,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/33/33_front.jpg",
+            "src/img/33/33_side.jpg"
+        ]
+    },
 ];
 
 export default products;

@@ -21,7 +21,7 @@ class ShopContainer extends HTMLElement {
         this.registerEventListeners();
         this.restoreProductArray();
         // this.products = this.filterAction("4");
-        this.filterEvent({target: {id: "filter-s4"}});
+        this.filterEvent({target: {id: "filter-s5"}});
         // this.setupProducts("No products available.");
     }
 
@@ -61,10 +61,11 @@ class ShopContainer extends HTMLElement {
         this.root.querySelector("#search-input").addEventListener("keypress", this.handleSearchEvent);
         this.root.querySelector("#dropdown-collections").addEventListener("click", this.handleDropdown);
         // this.root.querySelector("#filter-all").addEventListener("click", this.filterEvent);
-        this.root.querySelector("#filter-s1").addEventListener("click", this.filterEvent);
-        this.root.querySelector("#filter-s2").addEventListener("click", this.filterEvent);
-        this.root.querySelector("#filter-s3").addEventListener("click", this.filterEvent);
-        this.root.querySelector("#filter-s4").addEventListener("click", this.filterEvent);
+        //this.root.querySelector("#filter-s1").addEventListener("click", this.filterEvent);
+        //this.root.querySelector("#filter-s2").addEventListener("click", this.filterEvent);
+        //this.root.querySelector("#filter-s3").addEventListener("click", this.filterEvent);
+        //this.root.querySelector("#filter-s4").addEventListener("click", this.filterEvent);
+        this.root.querySelector("#filter-s5").addEventListener("click", this.filterEvent);
     }
 
     filterEvent = (event) => {
@@ -95,6 +96,11 @@ class ShopContainer extends HTMLElement {
             this.products = this.filterAction("4");
             this.setupProducts("No search results.");
             this.root.querySelector("#search_season").innerText = "Collection 4";
+        }
+        else if(event.target.id == "filter-s5"){
+            this.products = this.filterAction("5");
+            this.setupProducts("No search results.");
+            this.root.querySelector("#search_season").innerText = "Final season";
         }
         this.root.querySelector("#shop-product-container").focus();
     }

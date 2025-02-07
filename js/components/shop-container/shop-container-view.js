@@ -14,10 +14,7 @@ template.innerHTML =`
                     <i class="material-icons dropdown-icon">expand_more</i>
                 </button>
                 <div id="dropdown-collections-content" class="dropdown-content">
-                    <a id="filter-s4" class="dropdown-text">Season 4</a>
-                    <a id="filter-s3" class="dropdown-text">Season 3</a>
-                    <a id="filter-s2" class="dropdown-text">Season 2</a>
-                    <a id="filter-s1" class="dropdown-text">Season 1</a>
+                    <a id="filter-s5" class="dropdown-text">Final season</a>
                 </div>
             </div>
         </div>
