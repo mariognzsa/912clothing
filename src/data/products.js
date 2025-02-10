@@ -397,23 +397,6 @@ const products =
          ]
     },*/
     {
-        "id": 23,
-        "title": "@",
-        "description": "Crop top, Cotton fabric.",
-        "price": 300,
-        "discount": 0,
-        "season_released": "5",
-        "extras": "",
-        "sizes": [
-            "S",
-            "M",
-            "L"
-        ],
-        "images": [
-            "src/img/23/23_front.jpg"
-        ]
-    },
-    {
         "id": 24,
         "title": "⚚ 01 ⚚",
         "description": "100% leather jacket, screen printed",
@@ -425,8 +408,8 @@ const products =
             "Unisize"
         ],
         "images": [
-            "src/img/24/24_front.jpg",
-            "src/img/24/24_back.jpg"
+            "src/img/24/24_back.jpg",
+            "src/img/24/24_front.jpg"
         ]
     },
     {
@@ -441,8 +424,9 @@ const products =
             "Unisize"
         ],
         "images": [
-            "src/img/25/25_front.jpg",
-            "src/img/25/25_back.jpg"
+            
+            "src/img/25/25_back.jpg",
+            "src/img/25/25_front.jpg"
         ]
     },
     {
@@ -487,59 +471,8 @@ const products =
             "Unisize"
         ],
         "images": [
-            "src/img/28/28_front.jpg",
-            "src/img/28/28_back.jpg"
-        ]
-    },
-    {
-        "id": 29,
-        "title": "99Allah",
-        "description": "crop top, screen printed",
-        "price": 350,
-        "discount": 0,
-        "season_released": "5",
-        "extras": "",
-        "sizes": [
-            "S",
-            "M",
-            "L"
-        ],
-        "images": [
-            "src/img/29/29_front.jpg",
-        ]
-    },
-    {
-        "id": 30,
-        "title": "Alquimia",
-        "description": "screen printed",
-        "price": 400,
-        "discount": 0,
-        "season_released": "5",
-        "extras": "",
-        "sizes": [
-            "Unisize"
-        ],
-        "images": [
-            "src/img/30/30_front.jpg",
-            "src/img/30/30_side.jpg"
-        ]
-    },
-    {
-        "id": 31,
-        "title": "Carne",
-        "description": "Crop top, Cotton fabric",
-        "price": 400,
-        "discount": 0,
-        "season_released": "5",
-        "extras": "",
-        "sizes": [
-            "S",
-            "M",
-            "L"
-        ],
-        "images": [
-            "src/img/31/31_front.jpg",
-            "src/img/31/31_back.jpg"
+            "src/img/28/28_back.jpg",
+            "src/img/28/28_front.jpg"
         ]
     },
     {
@@ -575,6 +508,76 @@ const products =
         "images": [
             "src/img/33/33_front.jpg",
             "src/img/33/33_side.jpg"
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Alquimia",
+        "description": "screen printed",
+        "price": 400,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            
+            "src/img/30/30_side.jpg",
+            "src/img/30/30_front.jpg"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "99Allah",
+        "description": "crop top, screen printed",
+        "price": 350,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/29/29_front.jpg",
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Carne",
+        "description": "Crop top, Cotton fabric",
+        "price": 400,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            
+            "src/img/31/31_back.jpg",
+            "src/img/31/31_front.jpg"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "@",
+        "description": "Crop top, Cotton fabric.",
+        "price": 300,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "images": [
+            "src/img/23/23_front.jpg"
         ]
     },
 ];
