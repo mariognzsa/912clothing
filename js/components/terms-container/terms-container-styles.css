@@ -9,7 +9,7 @@
 }
 
 .terms-container {
-    padding: 0px 200px;
+    
 }
 
 .terms-top-container {
@@ -28,11 +28,23 @@
     font-weight: 200;
 }
 
+.terms-bottom-lettering {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 @media screen and (max-width: 480px) {
     .terms-bottom-container {
         padding-left: 20px;
         padding-right: 20px;
         font-size: 0.75rem;
+    }
+
+    .terms-bottom-lettering {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

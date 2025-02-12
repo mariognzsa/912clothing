@@ -34,6 +34,7 @@ template.innerHTML =`
         <li>b. Changes will be effective immediately upon posting on our website.</li>
         
         <h4>By making a purchase from <l>NINE TWELVE</l>, customers accept and agree to be bound by these terms and conditions.</h4>
+        <div class="terms-bottom-lettering">لا تدعني أريق الكثير من الدماء، فلا أستطيع أن أنزف بعد الآن. أعطني نظرة رحمة ولا تتركني أذهب مرة أخرى.<div>
     </div>
 </div>
 
