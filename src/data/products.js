@@ -559,8 +559,8 @@ const products =
         ],
         "images": [
             
-            "src/img/31/31_back.jpg",
-            "src/img/31/31_front.jpg"
+            "src/img/31/31_front.jpg",
+            "src/img/31/31_back.jpg"
         ]
     },
     {
