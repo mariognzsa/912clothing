@@ -397,88 +397,9 @@ const products =
          ]
     },*/
     {
-        "id": 24,
-        "title": "⚚ 01 ⚚",
-        "description": "100% leather jacket, screen printed",
-        "price": 3000,
-        "discount": 0,
-        "season_released": "5",
-        "extras": "",
-        "sizes": [
-            "Unisize"
-        ],
-        "images": [
-            "src/img/24/24_back.jpg",
-            "src/img/24/24_front.jpg"
-        ]
-    },
-    {
-        "id": 25,
-        "title": "⚚ 02 ⚚",
-        "description": "Denim jacket screen printed",
-        "price": 2000,
-        "discount": 0,
-        "season_released": "5",
-        "extras": "",
-        "sizes": [
-            "Unisize"
-        ],
-        "images": [
-            
-            "src/img/25/25_back.jpg",
-            "src/img/25/25_front.jpg"
-        ]
-    },
-    {
-        "id": 26,
-        "title": "⚚ 03 ⚚",
-        "description": "100% cotton dress shirt, screen printed",
-        "price": 2000,
-        "discount": 0,
-        "season_released": "5",
-        "extras": "",
-        "sizes": [
-            "Unisize"
-        ],
-        "images": [
-            "src/img/26/26_front.jpg"
-        ]
-    },
-    {
-        "id": 27,
-        "title": "⚚ 04 ⚚",
-        "description": "Denim pants, screen printed",
-        "price": 1500,
-        "discount": 0,
-        "season_released": "5",
-        "extras": "",
-        "sizes": [
-            "Unisize"
-        ],
-        "images": [
-            "src/img/27/27_front.jpg",
-        ]
-    },
-    {
-        "id": 28,
-        "title": "⚚ 05 ⚚",
-        "description": "100% leather jacket, screen printed",
-        "price": 3000,
-        "discount": 0,
-        "season_released": "5",
-        "extras": "",
-        "sizes": [
-            "Unisize"
-        ],
-        "images": [
-            "src/img/28/28_back.jpg",
-            "src/img/28/28_front.jpg"
-        ]
-    },
-    {
         "id": 32,
         "title": "Revelaciones",
-        "description": "Cotton 260 gms, screen printed",
+        "description": "10 pieces stock, cotton 260 gms, screen printed",
         "price": 500,
         "discount": 0,
         "season_released": "5",
@@ -497,7 +418,7 @@ const products =
     {
         "id": 33,
         "title": "Sin remordimiento",
-        "description": "Embroidery design",
+        "description": "10 pieces stock, embroidery design",
         "price": 350,
         "discount": 0,
         "season_released": "5",
@@ -513,7 +434,7 @@ const products =
     {
         "id": 30,
         "title": "Alquimia",
-        "description": "screen printed",
+        "description": "3 pieces stock, screen printed",
         "price": 400,
         "discount": 0,
         "season_released": "5",
@@ -530,7 +451,7 @@ const products =
     {
         "id": 29,
         "title": "99Allah",
-        "description": "crop top, screen printed",
+        "description": "10 pieces stock, crop top, screen printed",
         "price": 350,
         "discount": 0,
         "season_released": "5",
@@ -547,7 +468,7 @@ const products =
     {
         "id": 31,
         "title": "Carne",
-        "description": "Crop top, Cotton fabric",
+        "description": "8 pieces stock crop top, Cotton fabric",
         "price": 400,
         "discount": 0,
         "season_released": "5",
@@ -566,7 +487,7 @@ const products =
     {
         "id": 23,
         "title": "@",
-        "description": "Crop top, Cotton fabric.",
+        "description": "8 pieces stock, crop top, Cotton fabric.",
         "price": 300,
         "discount": 0,
         "season_released": "5",
@@ -578,6 +499,85 @@ const products =
         ],
         "images": [
             "src/img/23/23_front.jpg"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "⚚ 01 ⚚",
+        "description": "Unique piece, 100% leather jacket, screen printed",
+        "price": 3000,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/24/24_back.jpg",
+            "src/img/24/24_front.jpg"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "⚚ 02 ⚚",
+        "description": "Unique piece, Denim jacket screen printed",
+        "price": 2000,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            
+            "src/img/25/25_back.jpg",
+            "src/img/25/25_front.jpg"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "⚚ 03 ⚚",
+        "description": "Unique piece, 100% cotton dress shirt, screen printed",
+        "price": 2000,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/26/26_front.jpg"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "⚚ 04 ⚚",
+        "description": "Unique piece, Denim pants, screen printed",
+        "price": 1500,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/27/27_front.jpg",
+        ]
+    },
+    {
+        "id": 28,
+        "title": "⚚ 05 ⚚",
+        "description": "Unique piece, 100% leather jacket, screen printed",
+        "price": 3000,
+        "discount": 0,
+        "season_released": "5",
+        "extras": "",
+        "sizes": [
+            "Unisize"
+        ],
+        "images": [
+            "src/img/28/28_back.jpg",
+            "src/img/28/28_front.jpg"
         ]
     },
 ];
