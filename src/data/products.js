@@ -401,7 +401,7 @@ const products =
         "title": "Revelaciones",
         "description": "10 pieces stock, cotton 260 gms, screen printed",
         "price": 500,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -420,7 +420,7 @@ const products =
         "title": "Sin remordimiento",
         "description": "10 pieces stock, embroidery design",
         "price": 350,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -436,7 +436,7 @@ const products =
         "title": "Alquimia",
         "description": "3 pieces stock, screen printed",
         "price": 400,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -453,7 +453,7 @@ const products =
         "title": "99Allah",
         "description": "10 pieces stock, crop top, screen printed",
         "price": 350,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -470,7 +470,7 @@ const products =
         "title": "Carne",
         "description": "8 pieces stock crop top, Cotton fabric",
         "price": 400,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -489,7 +489,7 @@ const products =
         "title": "@",
         "description": "8 pieces stock, crop top, Cotton fabric.",
         "price": 300,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -506,7 +506,7 @@ const products =
         "title": "⚚ 01 ⚚",
         "description": "Unique piece, 100% leather jacket, screen printed",
         "price": 3000,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -522,7 +522,7 @@ const products =
         "title": "⚚ 02 ⚚",
         "description": "Unique piece, Denim jacket screen printed",
         "price": 2000,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -539,7 +539,7 @@ const products =
         "title": "⚚ 03 ⚚",
         "description": "Unique piece, 100% cotton dress shirt, screen printed",
         "price": 2000,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -554,7 +554,7 @@ const products =
         "title": "⚚ 04 ⚚",
         "description": "Unique piece, Denim pants, screen printed",
         "price": 1500,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
@@ -569,7 +569,7 @@ const products =
         "title": "⚚ 05 ⚚",
         "description": "Unique piece, 100% leather jacket, screen printed",
         "price": 3000,
-        "discount": 0,
+        "discount": 100,
         "season_released": "5",
         "extras": "",
         "sizes": [
